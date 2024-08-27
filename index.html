@@ -3,181 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TODO: Change the title to Fabrizio Pasini or brand -->
     <title>Fabrizio Pasini - Portfolio</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #e0e0e0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-            flex: 1;
-        }
-        header {
-            position: relative;
-            height: 200px;
-            overflow: hidden;
-            background-color: #1e1e1e;
-        }
-        .banner {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.7;
-        }
-        .header-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: #ffffff;
-            z-index: 1;
-        }
-        .header-content h1 {
-            font-size: 2.5em;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-        }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        .button {
-            display: inline-block;
-            color: #ffffff;
-            background: #333333;
-            padding: 8px 16px;
-            margin: 8px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s ease, transform 0.2s ease;
-            min-width: 100px;
-            text-align: center;
-            font-size: 0.9em;
-        }
-        .button:hover {
-            transform: translateY(-3px);
-            background: #4a4a4a;
-        }
-        .button i {
-            margin-right: 5px;
-        }
-        .linkedin { background: #0077B5; }
-        .artstation { background: #13aff0; }
-        .itch-io { background: #fa5c5c; }
-        .twitter { background: #1DA1F2; }
-        .behance { background: #1769ff; }
-        .profile, .works {
-            background: #1e1e1e;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(255,255,255,0.1);
-        }
-        .profile img {
-            max-width: 150px;
-            border-radius: 50%;
-            display: block;
-            margin: 0 auto 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-        }
-        .works-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .work-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 5px;
-            transition: transform 0.3s ease;
-        }
-        .work-item:hover {
-            transform: scale(1.05);
-        }
-        .work-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .work-item .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .work-item:hover .overlay {
-            opacity: 1;
-        }
-        .work-item .overlay-content {
-            color: white;
-            text-align: center;
-        }
-        footer {
-            background-color: #1e1e1e;
-            color: #888;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes slideIn {
-            from { transform: translateX(-100%); }
-            to { transform: translateX(0); }
-        }
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 1.5s ease-out forwards;
-        }
-        .slide-in {
-            transform: translateX(-100%);
-            animation: slideIn 1s ease-out forwards;
-        }
-        .delay-1 { animation-delay: 0.2s; }
-        .delay-2 { animation-delay: 0.4s; }
-        .delay-3 { animation-delay: 0.6s; }
-        .delay-4 { animation-delay: 0.8s; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <!-- TODO: Replace with your own banner image -->
+        <!-- Banner image size increased in CSS -->
         <img src="Images/Banner.jpg" alt="Banner" class="banner">
         <div class="header-content">
-            <!-- TODO: Replace with Fabrizio Pasini -->
             <h1 class="slide-in">Fabrizio Pasini</h1>
         </div>
     </header>
 
     <div class="container">
         <div class="button-container">
-            <!-- TODO: Replace '#' with profile URLs -->
             <a href="#" class="button linkedin fade-in delay-1"><i class="fab fa-linkedin"></i> LinkedIn</a>
             <a href="#" class="button artstation fade-in delay-1"><i class="fab fa-artstation"></i> ArtStation</a>
             <a href="#" class="button itch-io fade-in delay-1"><i class="fas fa-gamepad"></i> itch.io</a>
@@ -186,17 +26,14 @@
         </div>
 
         <div class="profile fade-in delay-1">
-            <!-- TODO: Replace profile picture -->
             <img src="Images/ProfilePic.jpg" alt="ProfilePicture">
             <h2>About Me</h2>
-            <!-- TODO: Replace bio -->
             <p>As a passionate game developer, I bring creativity and technical expertise to every project. With a degree in game design from Quasar Institute and an Unreal Engine Gameplay Developer certificate from Rainbow Academy, I specialize in creating immersive experiences using Unreal Engine's Blueprint and C++. My skills extend to Unity and C# for mobile app and game development, allowing me to craft engaging content across various platforms. I'm also versed in 3D modeling tools and audio software, enhancing my ability to contribute to diverse aspects of game creation. My goal is to push the boundaries of interactive entertainment, inspiring and entertaining people through innovative game design and development.</p>
         </div>
 
         <div class="works fade-in delay-3">
             <h2>My Works</h2>
             <div class="works-grid">
-                <!-- TODO: Replace works -->
                 <a href="#" class="work-item fade-in delay-1">
                     <img src="/api/placeholder/400/400" alt="Project 1">
                     <div class="overlay">
@@ -238,7 +75,6 @@
     </div>
 
     <footer>
-        <!-- TODO: Replace with Fabrizio Pasini and update the year if necessary -->
         <p>&copy; 2024 Fabrizio Pasini. All rights reserved.</p>
     </footer>
 </body>
