@@ -22,7 +22,6 @@ body {
 /* Header Styles */
 header {
     position: relative;
-    /* Increased height from 200px to 300px */
     height: 300px;
     overflow: hidden;
     background-color: #1e1e1e;
@@ -43,12 +42,21 @@ header {
     text-align: center;
     color: #ffffff;
     z-index: 1;
+    width: 100%; /* Ensure full width for text alignment */
 }
 
 .header-content h1 {
     font-size: 2.5em;
-    margin: 0;
+    margin: 0 0 10px 0; /* Added bottom margin for spacing */
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+/* New styles for subtitle */
+.header-content .subtitle {
+    font-size: 1.2em;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    font-weight: 300; /* Lighter font weight for contrast */
 }
 
 /* Button Styles */
