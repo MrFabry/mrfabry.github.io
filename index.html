@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,80 +20,272 @@
     </script>
 </head>
 <body>
+    <!-- Theme toggle button -->
+    <div class="theme-toggle animate__animated animate__fadeIn animate__delay-1s">
+        <button id="themeToggle" aria-label="Toggle dark/light mode">
+            <i class="fas fa-moon dark-icon"></i>
+            <i class="fas fa-sun light-icon"></i>
+        </button>
+    </div>
+
     <!-- Header section with banner image and title -->
-    <header>
+    <header class="animate__animated animate__fadeIn">
         <img src="Images/Banner.jpg" alt="Banner" class="banner">
         <div class="header-content">
-            <h1 class="slide-in">Fabrizio Pasini</h1>
-            <p class="subtitle slide-in delay-1">Game Developer | Unreal Engine Specialist | Unity Developer</p>
+            <h1 class="animate__animated animate__fadeInDown">Fabrizio Pasini</h1>
+            <p class="subtitle animate__animated animate__fadeInUp animate__delay-1s">Game Developer | Unreal Engine Specialist | Unity Developer</p>
         </div>
     </header>
 
     <div class="container">
         <!-- Social media and portfolio links -->
         <div class="button-container">
-            <a href="https://linkedin.com/in/fabrizio-pasini-042791243" target="_blank" class="button linkedin fade-in delay-1"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://mrfabry.artstation.com" target="_blank" class="button artstation fade-in delay-1"><i class="fab fa-artstation"></i> ArtStation</a>
-            <a href="https://fabriziop.itch.io" target="_blank" class="button itch-io fade-in delay-1"><i class="fas fa-gamepad"></i> Itch.io</a>
-            <a href="https://www.behance.net/fabriziopasiniGD?locale=it_IT" target="_blank" class="button behance fade-in delay-1"><i class="fab fa-behance"></i> Behance</a>
-            <a href="https://x.com/fabriyo98" target="_blank" class="button x fade-in delay-1">𝕏</a>
+            <a href="https://linkedin.com/in/fabrizio-pasini-042791243" target="_blank" class="button linkedin animate__animated animate__zoomIn animate__delay-1s"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://mrfabry.artstation.com" target="_blank" class="button artstation animate__animated animate__zoomIn animate__delay-1-2s"><i class="fab fa-artstation"></i> ArtStation</a>
+            <a href="https://fabriziop.itch.io" target="_blank" class="button itch-io animate__animated animate__zoomIn animate__delay-1-4s"><i class="fas fa-gamepad"></i> Itch.io</a>
+            <a href="https://www.behance.net/fabriziopasiniGD?locale=it_IT" target="_blank" class="button behance animate__animated animate__zoomIn animate__delay-1-6s"><i class="fab fa-behance"></i> Behance</a>
+            <a href="https://x.com/fabriyo98" target="_blank" class="button x animate__animated animate__zoomIn animate__delay-1-8s">𝕏</a>
         </div>
 
-        <!-- About Me section -->
-        <div class="profile fade-in delay-1">
-            <img src="Images/ProfilePic.jpg" alt="ProfilePicture">
-            <h2>About Me</h2>
-            <p>As a passionate game developer, I bring creativity and technical expertise to every project. With a degree in Game Design from Quasar Institute and an Unreal Engine Gameplay Developer certificate from Rainbow Academy, I am specialized in creating immersive experiences using Unreal Engine's Blueprint and C++. My skills extend to Unity and C# for mobile app and game development, allowing me to craft engaging content across various platforms. I basic skills in 3D modeling tools and audio software, enhancing my ability to contribute to diverse aspects of game creation. My goal is to push the boundaries of interactive entertainment, inspiring and entertaining people through innovative game design and development.</p>
-        </div>
+        <div class="content-grid">
+            <div class="main-content">
+                <!-- About Me section -->
+                <div class="profile animate__animated animate__fadeInLeft animate__delay-2s">
+                    <img src="Images/ProfilePic.jpg" alt="ProfilePicture" class="animate__animated animate__zoomIn animate__delay-2-5s">
+                    <h2>About Me</h2>
+                    <p>As a passionate game developer, I bring creativity and technical expertise to every project. With a degree in Game Design from Quasar Institute and an Unreal Engine Gameplay Developer certificate from Rainbow Academy, I am specialized in creating immersive experiences using Unreal Engine's Blueprint and C++. My skills extend to Unity and C# for mobile app and game development, allowing me to craft engaging content across various platforms. I have basic skills in 3D modeling tools and audio software, enhancing my ability to contribute to diverse aspects of game creation. My goal is to push the boundaries of interactive entertainment, inspiring and entertaining people through innovative game design and development.</p>
+                </div>
 
-        <!-- Portfolio works section -->
-        <div class="works fade-in delay-3">
-            <h2>Some Of My Works</h2>
-            <div class="works-grid">
-                <!-- Each work item is a link to the project with an image and overlay description -->
-                <a href="https://www.artstation.com/artwork/xYkReW" target="_blank" class="work-item fade-in delay-1">
-                    <img src="Images/Project1Adopted.jpg" alt="Adopted">
-                    <div class="overlay">
-                        <div class="overlay-content">
-                            <h3>Adopted</h3>
-                            <p>A particular legend has been widespread about an entity in the mountains that kidnaps and makes children disappear</p>
+                <!-- Portfolio works section -->
+                <div class="works animate__animated animate__fadeInUp animate__delay-2-5s">
+                    <h2>Some Of My Works</h2>
+                    <div class="works-grid">
+                        <!-- Each work item is a link to the project with an image and overlay description -->
+                        <a href="https://www.artstation.com/artwork/xYkReW" target="_blank" class="work-item animate__animated animate__fadeIn animate__delay-3s">
+                            <img src="Images/Project1Adopted.jpg" alt="Adopted">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <h3>Adopted</h3>
+                                    <p>A particular legend has been widespread about an entity in the mountains that kidnaps and makes children disappear</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://www.therookies.co/entries/31862" target="_blank" class="work-item animate__animated animate__fadeIn animate__delay-3-2s">
+                            <img src="Images/Project2ZombieSiegeChronicles.jpg" alt="ZombieSiegeChronicles">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <h3>Zombie Siege Chronicles</h3>
+                                    <p>Defend your refuge against relentless undead hordes in this intense tower defense game set in the zombie apocalypse</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://fabriziop.itch.io/tank-war-tactical" target="_blank" class="work-item animate__animated animate__fadeIn animate__delay-3-4s">
+                            <img src="Images/Project3TankWarTactics.jpg" alt="TankWarTactics">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <h3>Tank War Tactics</h3>
+                                    <p>A turn-based strategy game where players command a team of tanks to battle against enemy AI-controlled tanks.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://www.behance.net/gallery/101528399/FRANIZIA" target="_blank" class="work-item animate__animated animate__fadeIn animate__delay-3-6s">
+                            <img src="Images/Project4Franizia.jpg" alt="Franizia">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <h3>Franizia</h3>
+                                    <p>Made for a game jam. Project made in Unity, a 2D adventure-platform where you have to repair your spaceship.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Feed Section with Tabs -->
+            <div class="social-feed animate__animated animate__fadeInRight animate__delay-2s">
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="linkedin">
+                        <i class="fab fa-linkedin"></i>
+                    </button>
+                    <button class="tab-button" data-tab="artstation">
+                        <i class="fab fa-artstation"></i>
+                    </button>
+                </div>
+                
+                <!-- LinkedIn Feed -->
+                <div class="tab-content" id="linkedin-content">
+                    <div class="feed-posts">
+                        <div class="feed-post animate__animated animate__fadeIn animate__delay-2-5s">
+                            <div class="post-header">
+                                <img src="Images/ProfilePic.jpg" alt="Fabrizio Pasini" class="post-avatar">
+                                <div class="post-info">
+                                    <h4>Fabrizio Pasini</h4>
+                                    <span class="post-date">3 days ago</span>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <p>Excited to announce my latest project using Unreal Engine 5! Stay tuned for more updates on this immersive experience. #GameDev #UnrealEngine</p>
+                            </div>
+                            <div class="post-stats">
+                                <span><i class="far fa-thumbs-up"></i> 42</span>
+                                <span><i class="far fa-comment"></i> 8</span>
+                            </div>
+                        </div>
+                        
+                        <div class="feed-post animate__animated animate__fadeIn animate__delay-2-7s">
+                            <div class="post-header">
+                                <img src="Images/ProfilePic.jpg" alt="Fabrizio Pasini" class="post-avatar">
+                                <div class="post-info">
+                                    <h4>Fabrizio Pasini</h4>
+                                    <span class="post-date">1 week ago</span>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <p>Just finished implementing a new particle system for our upcoming game. The visual effects are looking fantastic! #GameDevelopment #VFX #Unity</p>
+                            </div>
+                            <div class="post-stats">
+                                <span><i class="far fa-thumbs-up"></i> 35</span>
+                                <span><i class="far fa-comment"></i> 5</span>
+                            </div>
+                        </div>
+                        
+                        <div class="feed-post animate__animated animate__fadeIn animate__delay-2-9s">
+                            <div class="post-header">
+                                <img src="Images/ProfilePic.jpg" alt="Fabrizio Pasini" class="post-avatar">
+                                <div class="post-info">
+                                    <h4>Fabrizio Pasini</h4>
+                                    <span class="post-date">2 weeks ago</span>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <p>Attended the Game Developers Conference last weekend. So many incredible insights and innovations in the industry! Looking forward to applying these ideas to my projects. #GDC2025 #GameDesign</p>
+                            </div>
+                            <div class="post-stats">
+                                <span><i class="far fa-thumbs-up"></i> 64</span>
+                                <span><i class="far fa-comment"></i> 12</span>
+                            </div>
                         </div>
                     </div>
-                </a>
-                <a href="https://www.therookies.co/entries/31862" target="_blank" class="work-item fade-in delay-2">
-                    <img src="Images/Project2ZombieSiegeChronicles.jpg" alt="ZombieSiegeChronicles">
-                    <div class="overlay">
-                        <div class="overlay-content">
-                            <h3>Zombie Siege Chronicles</h3>
-                            <p>Defend your refuge against relentless undead hordes in this intense tower defense game set in the zombie apocalypse</p>
+                </div>
+                
+                <!-- ArtStation Feed -->
+                <div class="tab-content" id="artstation-content" style="display: none;">
+                    <div class="feed-posts">
+                        <div class="feed-post animate__animated animate__fadeIn">
+                            <div class="post-header">
+                                <img src="Images/ProfilePic.jpg" alt="Fabrizio Pasini" class="post-avatar">
+                                <div class="post-info">
+                                    <h4>Fabrizio Pasini</h4>
+                                    <span class="post-date">5 days ago</span>
+                                </div>
+                            </div>
+                            <div class="post-content art-post">
+                                <div class="art-thumbnail" style="background-color: #444;"></div>
+                                <p>Just uploaded my latest 3D environment: "Ancient Temple Ruins". Created in Unreal Engine with custom assets. #3DArt #Environment</p>
+                            </div>
+                            <div class="post-stats">
+                                <span><i class="far fa-heart"></i> 78</span>
+                                <span><i class="far fa-comment"></i> 15</span>
+                            </div>
+                        </div>
+                        
+                        <div class="feed-post animate__animated animate__fadeIn">
+                            <div class="post-header">
+                                <img src="Images/ProfilePic.jpg" alt="Fabrizio Pasini" class="post-avatar">
+                                <div class="post-info">
+                                    <h4>Fabrizio Pasini</h4>
+                                    <span class="post-date">2 weeks ago</span>
+                                </div>
+                            </div>
+                            <div class="post-content art-post">
+                                <div class="art-thumbnail" style="background-color: #555;"></div>
+                                <p>Character concept for our upcoming game "Zombie Siege Chronicles". Design focuses on a veteran survivor with custom tactical gear. #CharacterDesign #ConceptArt</p>
+                            </div>
+                            <div class="post-stats">
+                                <span><i class="far fa-heart"></i> 92</span>
+                                <span><i class="far fa-comment"></i> 24</span>
+                            </div>
+                        </div>
+                        
+                        <div class="feed-post animate__animated animate__fadeIn">
+                            <div class="post-header">
+                                <img src="Images/ProfilePic.jpg" alt="Fabrizio Pasini" class="post-avatar">
+                                <div class="post-info">
+                                    <h4>Fabrizio Pasini</h4>
+                                    <span class="post-date">1 month ago</span>
+                                </div>
+                            </div>
+                            <div class="post-content art-post">
+                                <div class="art-thumbnail" style="background-color: #666;"></div>
+                                <p>Updated my portfolio with recent projects. Check out the new environment work for "Adopted" - our atmospheric horror game. #GameArt #EnvironmentDesign</p>
+                            </div>
+                            <div class="post-stats">
+                                <span><i class="far fa-heart"></i> 105</span>
+                                <span><i class="far fa-comment"></i> 32</span>
+                            </div>
                         </div>
                     </div>
-                </a>
-                <a href="https://fabriziop.itch.io/tank-war-tactical" target="_blank" class="work-item fade-in delay-3">
-                    <img src="Images/Project3TankWarTactics.jpg" alt="TankWarTactics">
-                    <div class="overlay">
-                        <div class="overlay-content">
-                            <h3>Tank War Tactics</h3>
-                            <p>A turn-based strategy game where players command a team of tanks to battle against enemy AI-controlled tanks.</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://www.behance.net/gallery/101528399/FRANIZIA" target="_blank" class="work-item fade-in delay-4">
-                    <img src="Images/Project4Franizia.jpg" alt="Franizia">
-                    <div class="overlay">
-                        <div class="overlay-content">
-                            <h3>Franizia</h3>
-                            <p>Made for a game jam. Project made in Unity, a 2D adventure-platform where you have to repair your spaceship.</p>
-                        </div>
-                    </div>
-                </a>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Footer section -->
-    <footer>
+    <footer class="animate__animated animate__fadeIn animate__delay-4s">
         <p>&copy; 2025 Fabrizio Pasini. All rights reserved.</p>
     </footer>
+
+    <!-- Theme toggle and tab switching scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme toggle
+            const themeToggle = document.getElementById('themeToggle');
+            const htmlElement = document.documentElement;
+            
+            // Check for saved theme preference or use default
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            htmlElement.setAttribute('data-theme', savedTheme);
+            
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = htmlElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                htmlElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+            
+            // Tab switching
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    // Hide all tab contents
+                    tabContents.forEach(content => {
+                        content.style.display = 'none';
+                    });
+                    
+                    // Show selected tab content
+                    const tabId = button.getAttribute('data-tab');
+                    document.getElementById(`${tabId}-content`).style.display = 'block';
+                    
+                    // Trigger animation for newly displayed content
+                    const posts = document.querySelectorAll(`#${tabId}-content .feed-post`);
+                    posts.forEach((post, index) => {
+                        post.classList.remove('animate__fadeIn');
+                        void post.offsetWidth; // Trigger reflow
+                        post.classList.add('animate__fadeIn');
+                        post.style.animationDelay = `${0.1 * index}s`;
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
