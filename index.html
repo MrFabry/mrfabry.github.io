@@ -138,5 +138,40 @@
             });
         });
     </script>
+    
+    <script>
+    function removeBranding() {
+        const brandingElements = document.querySelectorAll('.sk_branding');
+        brandingElements.forEach(element => {
+            element.remove();
+        });
+    }
+    
+    // Run immediately and then periodically check
+    removeBranding();
+    
+    setTimeout(removeBranding, 2000);
+    setTimeout(removeBranding, 5000);
+    
+    // Create observer to watch for dynamically added elements
+    const observer = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+            if (mutation.addedNodes && mutation.addedNodes.length > 0) {
+                for (let node of mutation.addedNodes) {
+                    if (node.classList && node.classList.contains('sk_branding')) {
+                        node.remove();
+                    }
+                }
+            }
+        });
+        removeBranding();
+    });
+    
+    // Start observing the document
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+</script>
 </body>
 </html>
