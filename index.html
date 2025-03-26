@@ -118,60 +118,12 @@
         <p>&copy; 2025 Fabrizio Pasini. All rights reserved.</p>
     </footer>
 
-    <!-- Theme toggle script -->
+    <!-- scripts -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Theme toggle
-            const themeToggle = document.getElementById('themeToggle');
-            const htmlElement = document.documentElement;
-            
-            // Check for saved theme preference or use default
-            const savedTheme = localStorage.getItem('theme') || 'dark';
-            htmlElement.setAttribute('data-theme', savedTheme);
-            
-            themeToggle.addEventListener('click', () => {
-                const currentTheme = htmlElement.getAttribute('data-theme');
-                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                
-                htmlElement.setAttribute('data-theme', newTheme);
-                localStorage.setItem('theme', newTheme);
-            });
-        });
-    </script>
-    
+        document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("themeToggle"),t=document.documentElement,a=localStorage.getItem("theme")||"dark";t.setAttribute("data-theme",a),e.addEventListener("click",()=>{const e=t.getAttribute("data-theme"),a="dark"===e?"light":"dark";t.setAttribute("data-theme",a),localStorage.setItem("theme",a)})});
+    </script
     <script>
-    function removeBranding() {
-        const brandingElements = document.querySelectorAll('.sk_branding');
-        brandingElements.forEach(element => {
-            element.remove();
-        });
-    }
-    
-    // Run immediately and then periodically check
-    removeBranding();
-    
-    setTimeout(removeBranding, 2000);
-    setTimeout(removeBranding, 5000);
-    
-    // Create observer to watch for dynamically added elements
-    const observer = new MutationObserver(mutations => {
-        mutations.forEach(mutation => {
-            if (mutation.addedNodes && mutation.addedNodes.length > 0) {
-                for (let node of mutation.addedNodes) {
-                    if (node.classList && node.classList.contains('sk_branding')) {
-                        node.remove();
-                    }
-                }
-            }
-        });
-        removeBranding();
-    });
-    
-    // Start observing the document
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true
-    });
-</script>
+        function removeBranding(){const a=document.querySelectorAll(".sk_branding");a.forEach(a=>{a.remove()})}removeBranding(),setTimeout(removeBranding,2e3),setTimeout(removeBranding,5e3);const observer=new MutationObserver(a=>{a.forEach(a=>{if(a.addedNodes&&a.addedNodes.length>0)for(let b of a.addedNodes)b.classList&&b.classList.contains("sk_branding")&&b.remove()}),removeBranding()});observer.observe(document.body,{childList:!0,subtree:!0});
+    </script
 </body>
 </html>
