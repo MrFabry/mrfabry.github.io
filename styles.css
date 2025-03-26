@@ -442,3 +442,7 @@ button:focus, a:focus {
 .linkedin-container {
     margin-top: 20px;
 }
+
+.sk_branding {
+    display: none !important;
+}
