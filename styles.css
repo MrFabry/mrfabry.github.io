@@ -412,3 +412,33 @@ button:focus, a:focus {
         border: 1px solid #ddd;
     }
 }
+
+.linkedin-feed {
+    background: var(--card-bg);
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px var(--box-shadow);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.linkedin-feed h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.linkedin-feed h2:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(to right, #0077B5, transparent);
+}
+
+.linkedin-container {
+    margin-top: 20px;
+}
