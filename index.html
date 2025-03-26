@@ -121,9 +121,9 @@
     <!-- scripts -->
     <script>
         document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("themeToggle"),t=document.documentElement,a=localStorage.getItem("theme")||"dark";t.setAttribute("data-theme",a),e.addEventListener("click",()=>{const e=t.getAttribute("data-theme"),a="dark"===e?"light":"dark";t.setAttribute("data-theme",a),localStorage.setItem("theme",a)})});
-    </script
+    </script>
     <script>
         function removeBranding(){const a=document.querySelectorAll(".sk_branding");a.forEach(a=>{a.remove()})}removeBranding(),setTimeout(removeBranding,2e3),setTimeout(removeBranding,5e3);const observer=new MutationObserver(a=>{a.forEach(a=>{if(a.addedNodes&&a.addedNodes.length>0)for(let b of a.addedNodes)b.classList&&b.classList.contains("sk_branding")&&b.remove()}),removeBranding()});observer.observe(document.body,{childList:!0,subtree:!0});
-    </script
+    </script>
 </body>
 </html>
