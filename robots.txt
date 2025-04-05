@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mrfabry.github.io/sitemap.xml
