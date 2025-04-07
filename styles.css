@@ -302,28 +302,26 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8) !important;
+    background-color: var(--overlay-bg);
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-    pointer-events: none;
 }
 
 .work-item:hover .overlay {
-    opacity: 1 !important;
-    pointer-events: auto;
+    opacity: 1;
 }
 
-.work-item .overlay-content {
-    color: white !important;
+.overlay-content {
+    color: white;
     text-align: center;
     padding: 15px;
     z-index: 5;
 }
 
-.work-item .overlay-content h3 {
+.overlay-content h3 {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1.3em;
