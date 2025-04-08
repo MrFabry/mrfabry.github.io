@@ -296,32 +296,42 @@ header {
     transform: scale(1.1);
 }
 
+.work-item a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .work-item .overlay {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--overlay-bg);
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
+    z-index: 10;
 }
 
-.work-item:hover .overlay {
+.work-item a:hover .overlay {
     opacity: 1;
 }
 
-.overlay-content {
+.work-item .overlay-content {
     color: white;
     text-align: center;
     padding: 15px;
-    z-index: 5;
+    z-index: 15;
 }
 
-.overlay-content h3 {
+.work-item .overlay-content h3 {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1.3em;
