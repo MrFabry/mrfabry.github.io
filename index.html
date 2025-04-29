@@ -19,6 +19,16 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGZ10V9GVH"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-WGZ10V9GVH")</script>
    </head>
    <body>
+      <div id="cookieConsent" class="cookie-consent">
+    <div class="cookie-content">
+        <p>This website uses cookies and Google Analytics to improve your experience and analyze site traffic. 
+           By continuing to browse, you consent to our use of cookies. 
+           <a href="privacy-policy.html">Learn more about our privacy policy</a>.</p>
+        <div class="cookie-buttons">
+            <button id="cookieAccept" class="cookie-button accept">Got it</button>
+        </div>
+    </div>
+</div>
       <div class="theme-toggle animate__animated animate__fadeIn animate__delay-1s"><button id="themeToggle" aria-label="Toggle dark/light mode"><i class="fas fa-moon dark-icon"></i><i class="fas fa-sun light-icon"></i></button></div>
       <header class="animate__animated animate__fadeIn">
          <img src="Images/Banner.webp" alt="Fabrizio Pasini Game Developer Banner" class="banner" loading="eager">
@@ -157,5 +167,25 @@
          ]
          }
       </script>
+      <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const cookieConsent = document.getElementById("cookieConsent");
+    const acceptButton = document.getElementById("cookieAccept");
+    
+    // Check if user has already accepted
+    const consentAccepted = localStorage.getItem("cookieConsent") === "accept";
+    
+    if (!consentAccepted) {
+        // If not yet accepted, show the banner
+        cookieConsent.style.display = "block";
+    }
+    
+    // Handle accept button click
+    acceptButton.addEventListener("click", function() {
+        localStorage.setItem("cookieConsent", "accept");
+        cookieConsent.style.display = "none";
+    });
+});
+</script>
    </body>
 </html>
