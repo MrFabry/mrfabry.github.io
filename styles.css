@@ -133,7 +133,7 @@ body {
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 1000;
+    z-index: 1000; 
 }
 
 .theme-toggle button {
@@ -146,15 +146,22 @@ body {
     cursor: pointer;
     box-shadow: 0 2px 5px var(--box-shadow);
     transition: all 0.3s ease;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
 }
 
 .theme-toggle button:hover {
     transform: scale(1.1);
 }
 
-.dark-icon { display: none; }
-.light-icon { display: inline-block; }
-:root[data-theme="light"] .dark-icon { display: inline-block; }
+.dark-icon { display: none; } 
+.light-icon { display: inline-block; } 
+
+:root[data-theme="light"] .dark-icon { display: inline-block; } 
 :root[data-theme="light"] .light-icon { display: none; }
 
 
@@ -428,10 +435,6 @@ header {
 .unity i { color: #FFF; }
 .cpp { background: linear-gradient(135deg, #3a9be8, #0075c0); font-weight: bold; }
 .csharp { background: linear-gradient(135deg, #aa4dbe, #7d3f8b); font-weight: bold; } 
-.cpp, .csharp { width: 44px; height: 44px; font-size: 20px; } 
-
-
-
 .works-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
@@ -758,3 +761,4 @@ button:focus, a:focus {
         padding: 1rem 0.8rem;
     }
 }
+
