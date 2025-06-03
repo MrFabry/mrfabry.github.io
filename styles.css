@@ -170,20 +170,23 @@ body {
     transition: all 0.3s ease;
 }
 
-.dark-icon { 
-    display: none; 
+:root[data-theme="dark"] .dark-icon,
+:root .dark-icon { 
+    display: none !important; 
 } 
 
-.light-icon { 
-    display: inline-block; 
+:root[data-theme="dark"] .light-icon,
+:root .light-icon { 
+    display: inline-block !important; 
 } 
 
+/* Light theme - show sun icon, hide moon icon */
 :root[data-theme="light"] .dark-icon { 
-    display: inline-block; 
+    display: inline-block !important; 
 } 
 
 :root[data-theme="light"] .light-icon { 
-    display: none; 
+    display: none !important; 
 }
 
 header {
