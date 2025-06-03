@@ -1,3 +1,16 @@
+:root {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+}
 
 :root[data-theme="dark"] {
     --bg-color: #121212;
@@ -180,7 +193,6 @@ body {
     display: inline-block !important; 
 } 
 
-/* Light theme - show sun icon, hide moon icon */
 :root[data-theme="light"] .dark-icon { 
     display: inline-block !important; 
 } 
@@ -684,13 +696,22 @@ button:focus, a:focus {
         background: white !important;
         color: black !important;
     }
-    :root[data-theme="dark"] { 
-        --bg-color: #ffffff;
-        --container-bg: #ffffff;
-        --text-color: #000000;
-        --card-bg: #ffffff;
-        --border-color: #dddddd;
-        --accent-color: #005588;
+    :root[data-theme="dark"] {
+        --bg-color: #121212;
+        --container-bg: #1e1e1e;
+        --text-color: #e0e0e0;
+        --text-muted: #888;
+        --header-shadow: rgba(0, 0, 0, 0.7);
+        --box-shadow: rgba(255, 255, 255, 0.1);
+        --overlay-bg: rgba(0, 0, 0, 0.7); 
+        --button-bg: #333333;
+        --button-hover: #4a4a4a;
+        --card-bg: #1e1e1e;
+        --border-color: #333;
+        --accent-color: #0077B5; 
+        --code-green: #39d353;   
+        --code-blue: #79c0ff;    
+        --code-purple: #d73a49;  
     }
     a { color: #005588 !important; text-decoration: underline !important; }
     .work-item .overlay { display: none; } 
