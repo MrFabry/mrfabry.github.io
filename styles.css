@@ -158,11 +158,28 @@ body {
     transform: scale(1.1);
 }
 
-.dark-icon { display: none; } 
-.light-icon { display: inline-block; } 
+.theme-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition: all 0.3s ease;
+}
 
-:root[data-theme="light"] .dark-icon { display: inline-block; } 
-:root[data-theme="light"] .light-icon { display: none; }
+.dark-icon { 
+    display: none; 
+} 
+
+.light-icon { 
+    display: block; 
+} 
+
+:root[data-theme="light"] .dark-icon { 
+    display: block; 
+} 
+
+:root[data-theme="light"] .light-icon { 
+    display: none; 
+}
 
 
 header {
