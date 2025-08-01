@@ -593,22 +593,6 @@ header {
     margin-top: 20px;
 }
 
-.sk_branding,
-div[class*="sk_branding"],
-div[class^="sk_branding"] {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    height: 0 !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    border: none !important;
-    max-height: 0 !important;
-    pointer-events: none !important;
-}
-
-
 footer {
     background-color: var(--container-bg);
     color: var(--text-muted);
