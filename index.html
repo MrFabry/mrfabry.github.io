@@ -163,6 +163,7 @@
        })
    });
 
+   /*
    function removeBranding(){
        const a=document.querySelectorAll(".sk_branding");
        a.forEach(a=>{a.remove()})
@@ -179,6 +180,7 @@
        removeBranding()
    });
    observer.observe(document.body,{childList:!0,subtree:!0});
+*/
 
    document.addEventListener("DOMContentLoaded", function() {
        const cookieConsent = document.getElementById("cookieConsent");
@@ -193,10 +195,8 @@
        });
    });
 
-   // JavaScript for dynamic particles (example)
-   // You might need a more sophisticated script for the desired particle/code rain effect.
+   // JavaScript for dynamic particles
    // This is a very basic example for the .particles-bg
-   // Consider using a library or a more detailed script if reactbits.dev doesn't provide one.
    document.addEventListener('DOMContentLoaded', () => {
        const particlesContainer = document.querySelector('.particles-bg');
        if (particlesContainer) {
