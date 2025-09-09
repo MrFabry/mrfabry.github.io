@@ -21,10 +21,8 @@
    </script>
    <script src="https://kit.fontawesome.com/20edb239db.js" crossorigin="anonymous"></script></head>
 <body>
-<div class="particles-bg">
-</div>
-<div class="code-rain">
-</div>
+<div class="particles-bg"></div>
+<div class="code-rain"></div>
 
 <div id="cookieConsent" class="cookie-consent" style="display: none;">
    <div class="cookie-content">
@@ -184,9 +182,20 @@
 </main>
 
 <footer class="animate__animated animate__fadeIn animate__delay-4s">
-   <p>&copy; 2025 Fabrizio Pasini. All rights reserved.</p>
+    <p id="copyright-year">© 2025 Fabrizio Pasini. All rights reserved.</p>
 </footer>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const currentYear = new Date().getFullYear();
+        const copyrightElement = document.getElementById("copyright-year");
+        if (copyrightElement) {
+            const textContent = copyrightElement.textContent;
+            const updatedText = textContent.replace(/\d{4}/, currentYear);
+            copyrightElement.textContent = updatedText;
+        }
+    });
+</script>
 <script>
    document.addEventListener("DOMContentLoaded",()=>{
        const e=document.getElementById("themeToggle"),
@@ -200,7 +209,6 @@
            localStorage.setItem("theme",a)
        })
    });
-   
    document.addEventListener("DOMContentLoaded", function() {
        const cookieConsent = document.getElementById("cookieConsent");
        const acceptButton = document.getElementById("cookieAccept");
@@ -213,40 +221,37 @@
            cookieConsent.style.display = "none";
        });
    });
-
-   // JavaScript for dynamic particles
    document.addEventListener('DOMContentLoaded', () => {
        const particlesContainer = document.querySelector('.particles-bg');
        if (particlesContainer) {
-           const numberOfParticles = 20; // Adjust as needed
+           const numberOfParticles = 20;
            for (let i = 0; i < numberOfParticles; i++) {
                const particle = document.createElement('div');
                particle.classList.add('particle');
                particle.style.left = `${Math.random() * 100}%`;
                particle.style.top = `${Math.random() * 100}%`;
-               const size = Math.random() * 5 + 2; // Size between 2px and 7px
+               const size = Math.random() * 5 + 2;
                particle.style.width = `${size}px`;
                particle.style.height = `${size}px`;
-               particle.style.animationDelay = `${Math.random() * 6}s`; // Randomize animation start
-               particle.style.animationDuration = `${Math.random() * 3 + 3}s`; // Randomize duration
+               particle.style.animationDelay = `${Math.random() * 6}s`;
+               particle.style.animationDuration = `${Math.random() * 3 + 3}s`;
                particlesContainer.appendChild(particle);
            }
        }
-
        const codeRainContainer = document.querySelector('.code-rain');
        if (codeRainContainer) {
-           const numberOfChars = 400; // Adjust as needed
-           const chars = "01"; // Characters to display
+           const numberOfChars = 400;
+           const chars = "01";
            for (let i = 0; i < numberOfChars; i++) {
                const codeChar = document.createElement('span');
                codeChar.classList.add('code-char');
                codeChar.textContent = chars.charAt(Math.floor(Math.random() * chars.length));
                codeChar.style.left = `${Math.random() * 100}%`;
-               codeChar.style.top = `${Math.random() * -100}vh`; // Start above viewport
+               codeChar.style.top = `${Math.random() * -100}vh`;
                codeChar.style.animationDelay = `${Math.random() * 8}s`;
-               codeChar.style.animationDuration = `${Math.random() * 4 + 4}s`; // Duration between 4s and 8s
-               codeChar.style.fontSize = `${Math.random() * 6 + 10}px`; // Font size between 10px and 16px
-                const randomColor = Math.random() > 0.5 ? 'var(--code-green)' : (Math.random() > 0.5 ? 'var(--code-blue)' : 'var(--code-purple)');
+               codeChar.style.animationDuration = `${Math.random() * 4 + 4}s`;
+               codeChar.style.fontSize = `${Math.random() * 6 + 10}px`;
+               const randomColor = Math.random() > 0.5 ? 'var(--code-green)' : (Math.random() > 0.5 ? 'var(--code-blue)' : 'var(--code-purple)');
                codeChar.style.color = randomColor;
                codeRainContainer.appendChild(codeChar);
            }
