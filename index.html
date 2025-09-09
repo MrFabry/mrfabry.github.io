@@ -26,6 +26,15 @@
 <div class="code-rain">
 </div>
 
+<div id="cookieConsent" class="cookie-consent" style="display: none;">
+   <div class="cookie-content">
+      <p>This website uses cookies and Google Analytics to improve your experience and analyze site traffic. By continuing to browse, you consent to our use of cookies.</p>
+      <div class="cookie-buttons">
+         <button id="cookieAccept" class="cookie-button accept">Got it</button>
+      </div>
+   </div>
+</div>
+
 <div class="theme-toggle animate__animated animate__fadeIn animate__delay-1s">
    <button id="themeToggle" aria-label="Toggle dark/light mode">
       <i class="fa-solid fa-moon dark-icon"></i>
@@ -190,6 +199,19 @@
            t.setAttribute("data-theme",a),
            localStorage.setItem("theme",a)
        })
+   });
+   
+   document.addEventListener("DOMContentLoaded", function() {
+       const cookieConsent = document.getElementById("cookieConsent");
+       const acceptButton = document.getElementById("cookieAccept");
+       const consentAccepted = localStorage.getItem("cookieConsent") === "accept";
+       if (!consentAccepted) {
+           cookieConsent.style.display = "block";
+       }
+       acceptButton.addEventListener("click", function() {
+           localStorage.setItem("cookieConsent", "accept");
+           cookieConsent.style.display = "none";
+       });
    });
 
    // JavaScript for dynamic particles
