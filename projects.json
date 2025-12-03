@@ -1,18 +1,61 @@
 {
   "projects": [
     {
+      "id": 9,
+      "title": "VR By Bridge Simulator",
+      "description": "A Bridge-based simulator that provides engineers with a realistic virtual environment to train and refine maintenance procedures safely and efficiently.",
+      "image": "Images/Projects/Project9vrbridge.webp",
+      "status": "In Progress",
+      "tags": ["Unreal Engine", "VR", "Work in Progress"],
+      "tech": ["Unreal Engine", "C++", "Blueprints", "3D", "VR MetaQuest 3"],
+      "clients": [
+        {
+          "name": "Newo Design",
+          "url": "https://newodesign.it",
+          "image": "Images/Badges/newo-logo.webp"
+        }
+      ],
+      "links": {
+        "website": "https://youtu.be/IgfvTkT7uc8"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Realtime-Environment Interactive Visualization Apps",
+      "description": "Interactive architectural visualizations and walkthroughs using Unreal Engine for high-end architecture projects.",
+      "image": "Images/Projects/Project10archviz.webp",
+      "status": "Released",
+      "tags": ["Unreal Engine", "Prototypes"],
+      "tech": ["Unreal Engine", "C++", "Blueprints", "3D", "PixelStreaming", "Cesium", "ArchViz"],
+      "clients": [
+        {
+          "name": "Newo Design",
+          "url": "https://newodesign.it",
+          "image": "Images/Badges/newo-logo.webp"
+        }
+      ],
+      "links": {
+        "website": "https://youtu.be/J79uv_6Mk7A"
+      }
+    },
+    {
       "id": 7,
       "title": "BigBroApp",
       "description": "Innovative Tamagotchi-style game for famous Twitch streamer Moonryde featuring post-apocalyptic character management. Players use Twitch points to purchase equipment and food, enhancing their character's power score and competing in real-time leaderboards within the streaming community.",
       "image": "Images/Projects/Project8bigbro.webp",
       "status": "In Progress",
-      "tags": ["Unity", "In Progress"],
+      "tags": ["Unity", "Work in Progress"],
       "tech": ["Unity", "C#", "2D", "Mobile", "Project Manager"],
       "clients": [
         {
-          "name": "Quasar Institute for Advanced Design",
+          "name": "MoonRyde twitch",
           "url": "https://www.twitch.tv/moonryde/",
           "image": "Images/Badges/moonride-logo.webp"
+        },
+        {
+          "name": "BigBro SRL",
+          "url": "https://www.linkedin.com/company/bigbrosrl/about/",
+          "image": "Images/Badges/bigbrosrl-logo.webp"
         }
       ],
       "links": {
