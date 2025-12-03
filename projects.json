@@ -1,0 +1,167 @@
+{
+  "projects": [
+    {
+      "id": 7,
+      "title": "BigBroApp",
+      "description": "Innovative Tamagotchi-style game for famous Twitch streamer Moonryde featuring post-apocalyptic character management. Players use Twitch points to purchase equipment and food, enhancing their character's power score and competing in real-time leaderboards within the streaming community.",
+      "image": "Images/Projects/Project8bigbro.webp",
+      "status": "In Progress",
+      "tags": ["Unity", "In Progress"],
+      "tech": ["Unity", "C#", "2D", "Mobile", "Project Manager"],
+      "clients": [
+        {
+          "name": "Quasar Institute for Advanced Design",
+          "url": "https://www.twitch.tv/moonryde/",
+          "image": "Images/Badges/moonride-logo.webp"
+        }
+      ],
+      "links": {
+        "website": "https://www.twitch.tv/moonryde/"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Adopted",
+      "description": "A particular legend has been widespread about an entity in the mountains that kidnaps and makes children disappear. A horror experience focused on atmosphere and storytelling.",
+      "image": "Images/Projects/Project1Adopted.webp",
+      "status": "Released",
+      "tags": ["Unreal Engine", "Released Games"],
+      "tech": ["Unreal Engine", "Blueprints", "3D", "Horror"],
+      "clients": [
+        {
+          "name": "Quasar Institute for Advanced Design",
+          "url": "https://quasarinstitute.it/",
+          "image": "Images/Badges/quasar-logo.webp"
+        }
+      ],
+      "links": {
+        "artstation": "https://www.artstation.com/artwork/xYkReW",
+        "itch": "https://fabriziop.itch.io/adopted"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Zombie Siege Chronicles",
+      "description": "Defend your refuge against relentless undead hordes in this intense tower defense game set in the zombie apocalypse.",
+      "image": "Images/Projects/Project2ZombieSiegeChronicles.webp",
+      "status": "Released",
+      "tags": ["Unreal Engine", "Released Games"],
+      "tech": ["Unreal Engine", "C++", "3D", "Strategy"],
+      "clients": [
+        {
+          "name": "The Rookies",
+          "url": "https://www.therookies.co/",
+          "image": "Images/Badges/rookies-logo.webp"
+        },
+        {
+        "name": "Rainbow Academy",
+        "url": "https://www.rainbowacademy.it/",
+        "image": "Images/Badges/rainbowacademy-logo.webp"
+        }
+      ],
+      "links": {
+        "website": "https://www.therookies.co/entries/31862",
+        "itch": "https://fabriziop.itch.io/zombie-siege-chronicles"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Tank War Tactics",
+      "description": "A turn-based strategy game where players command a team of tanks to battle against enemy AI-controlled tanks.",
+      "image": "Images/Projects/Project3TankWarTactics.webp",
+      "status": "Released",
+      "tags": ["Unreal Engine", "Released Games"],
+      "tech": ["Unreal Engine", "C++", "Turn-Based"],
+      "clients": [
+        {
+          "name": "Rainbow Academy",
+          "url": "https://www.rainbowacademy.it/",
+          "image": "Images/Badges/rainbowacademy-logo.webp"
+        }
+      ],
+      "links": {
+        "artstation": "https://mrfabry.artstation.com/projects/m8xgYZ",
+        "itch": "https://fabriziop.itch.io/tank-war-tactical"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Franizia",
+      "description": "Made for a game jam. A 2D adventure-platformer made in Unity where you have to repair your spaceship.",
+      "image": "Images/Projects/Project4Franizia.webp",
+      "status": "Prototype",
+      "tags": ["Unity", "Prototypes"],
+      "tech": ["Unity", "C#", "2D", "Platformer"],
+      "clients": [
+        {
+          "name": "Quasar Institute for Advanced Design",
+          "url": "https://quasarinstitute.it/",
+          "image": "Images/Badges/quasar-logo.webp"
+        }
+      ],
+      "links": {
+        "behance": "https://www.behance.net/gallery/101528399/FRANIZIA"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Caos Arena",
+      "description": "A Fantasy FPS game! Defend the tomb of the ancient Gods from hordes of enemies. Made for a exam project.",
+      "image": "Images/Projects/Project5Caosarena.webp",
+      "status": "Released",
+      "tags": ["Unreal Engine", "Released"],
+      "tech": ["Unreal Engine", "Blueprints","3D"],
+      "clients": [
+        {
+          "name": "Quasar Institute for Advanced Design",
+          "url": "https://quasarinstitute.it/",
+          "image": "Images/Badges/quasar-logo.webp"
+        }
+      ],
+      "links": {
+        "artstation": "https://www.artstation.com/artwork/nEkywK",
+        "itch": "https://fabriziop.itch.io/caos-arena"
+      }
+    },
+    {
+      "id": 1,
+      "title": "Lab 403",
+      "description": "You have managed to enter the fearsome laboratory 403. Made for a exam project.",
+      "image": "Images/Projects/Project6Lab403.webp",
+      "status": "Released",
+      "tags": ["Unreal Engine", "Released"],
+      "tech": ["Unreal Engine", "Blueprints","3D"],
+      "clients": [
+        {
+          "name": "Quasar Institute for Advanced Design",
+          "url": "https://quasarinstitute.it/",
+          "image": "Images/Badges/quasar-logo.webp"
+        }
+      ],
+      "links": {
+        "artstation": "https://www.artstation.com/artwork/nEkbr6",
+        "itch": "https://fabriziop.itch.io/lab403"
+      }
+    },
+    {
+      "id": 0,
+      "title": "Sucked In",
+      "description": "This game was developed by a team of four in ten days during the Zagarolo Game City Game Jam.",
+      "image": "Images/Projects/Project7suckedin.webp",
+      "status": "Released",
+      "tags": ["Unity", "Released"],
+      "tech": ["Unity", "C#", "2D", "Game Jam"],
+      "clients": [
+        {
+          "name": "Lazion Innova - Zagarolo Game City",
+          "url": "https://www.lazioinnova.it/",
+          "image": "Images/Badges/lazioinnova.webp"
+        }
+      ],
+      "links": {
+        "behance": "https://www.behance.net/gallery/122652769/SUCKED-IN",
+        "itch": "https://zagarolo-game-city.itch.io/sucked-in"
+      }
+    }
+  ]
+}
