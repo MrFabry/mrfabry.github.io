@@ -1356,6 +1356,51 @@ strong {
 }
 
 /* ========================================
+   CUSTOM SCROLLBAR
+   ======================================== */
+
+/* For Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-bg-elevated) var(--color-bg-primary);
+}
+
+/* For Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-bg-elevated);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-bg-primary);
+  transition: background-color var(--transition-fast);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-accent-secondary);
+}
+
+/* ========================================
+   CUSTOM TEXT SELECTION
+   ======================================== */
+
+::selection {
+  background: var(--color-accent-secondary); 
+  color: #1C1C1E;
+}
+
+/* For Firefox compatibility */
+::-moz-selection {
+  background: var(--color-accent-secondary);
+  color: #1C1C1E;
+}
+
+/* ========================================
    RESPONSIVE DESIGN
    ======================================== */
 @media (max-width: 1024px) {
