@@ -24,7 +24,7 @@
       "title": "Realtime-Environment Interactive Visualization Apps",
       "description": "Interactive architectural visualizations and walkthroughs using Unreal Engine for high-end architecture projects.",
       "image": "Images/Projects/Project10archviz.webp",
-      "status": "Released",
+      "status": "Prototypes",
       "tags": ["Unreal Engine", "Prototypes"],
       "tech": ["Unreal Engine", "C++", "Blueprints", "3D", "PixelStreaming", "Cesium", "ArchViz"],
       "clients": [
