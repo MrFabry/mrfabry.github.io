@@ -157,11 +157,33 @@ function initScrollAnimations() {
   });
 }
 
+// fallback loader for file:// protocol (no fetch)
+function loadProjectsViaScript() {
+  return new Promise((resolve, reject) => {
+    window.__projectsCallback = (data) => resolve(data);
+    const script = document.createElement('script');
+    script.src = 'projects.json.js';
+    script.onerror = () => reject(new Error('script load failed'));
+    document.head.appendChild(script);
+    setTimeout(() => reject(new Error('timeout')), 3000);
+  });
+}
+
+// ========== INLINE PROJECT DATA (fallback for file:// protocol) ==========
+const PROJECTS_DATA = {"projects":[{"id":9,"title":"VR By Bridge Simulator","description":"A Bridge-based simulator that provides engineers with a realistic virtual environment to train and refine maintenance procedures safely and efficiently.","image":"Images/Projects/Project9vrbridge.webp","status":"In Progress","tags":["Unreal Engine","VR","Work in Progress"],"tech":["Unreal Engine","C++","Blueprints","3D","VR MetaQuest 3"],"clients":[{"name":"Newo Design","url":"https://newodesign.it","image":"Images/Badges/newo-logo.webp"}],"links":{"website":"https://youtu.be/IgfvTkT7uc8"}},{"id":8,"title":"Realtime-Environment Interactive Visualization Apps","description":"Interactive architectural visualizations and walkthroughs using Unreal Engine for high-end architecture projects.","image":"Images/Projects/Project10archviz.webp","status":"Prototypes","tags":["Unreal Engine","Prototypes"],"tech":["Unreal Engine","C++","Blueprints","3D","PixelStreaming","Cesium","ArchViz"],"clients":[{"name":"Newo Design","url":"https://newodesign.it","image":"Images/Badges/newo-logo.webp"}],"links":{"website":"https://youtu.be/J79uv_6Mk7A"}},{"id":7,"title":"BigBroApp","description":"Innovative Tamagotchi-style game for famous Twitch streamer Moonryde featuring post-apocalyptic character management.","image":"Images/Projects/Project8bigbro.webp","status":"In Progress","tags":["Unity","Work in Progress"],"tech":["Unity","C#","2D","Mobile","Project Manager"],"clients":[{"name":"MoonRyde twitch","url":"https://www.twitch.tv/moonryde/","image":"Images/Badges/moonride-logo.webp"},{"name":"BigBro SRL","url":"https://www.linkedin.com/company/bigbrosrl/about/","image":"Images/Badges/bigbrosrl-logo.webp"}],"links":{"website":"https://www.twitch.tv/moonryde/"}},{"id":6,"title":"Adopted","description":"A particular legend has been widespread about an entity in the mountains that kidnaps and makes children disappear. A horror experience focused on atmosphere and storytelling.","image":"Images/Projects/Project1Adopted.webp","status":"Released","tags":["Unreal Engine","Released Games"],"tech":["Unreal Engine","Blueprints","3D","Horror"],"clients":[{"name":"Quasar Institute for Advanced Design","url":"https://quasarinstitute.it/","image":"Images/Badges/quasar-logo.webp"}],"links":{"artstation":"https://www.artstation.com/artwork/xYkReW","itch":"https://fabriziop.itch.io/adopted"}},{"id":5,"title":"Zombie Siege Chronicles","description":"Defend your refuge against relentless undead hordes in this intense tower defense game set in the zombie apocalypse.","image":"Images/Projects/Project2ZombieSiegeChronicles.webp","status":"Released","tags":["Unreal Engine","Released Games"],"tech":["Unreal Engine","C++","3D","Strategy"],"clients":[{"name":"The Rookies","url":"https://www.therookies.co/","image":"Images/Badges/rookies-logo.webp"},{"name":"Rainbow Academy","url":"https://www.rainbowacademy.it/","image":"Images/Badges/rainbowacademy-logo.webp"}],"links":{"website":"https://www.therookies.co/entries/31862","itch":"https://fabriziop.itch.io/zombie-siege-chronicles"}},{"id":4,"title":"Tank War Tactics","description":"A turn-based strategy game where players command a team of tanks to battle against enemy AI-controlled tanks.","image":"Images/Projects/Project3TankWarTactics.webp","status":"Released","tags":["Unreal Engine","Released Games"],"tech":["Unreal Engine","C++","Turn-Based"],"clients":[{"name":"Rainbow Academy","url":"https://www.rainbowacademy.it/","image":"Images/Badges/rainbowacademy-logo.webp"}],"links":{"artstation":"https://mrfabry.artstation.com/projects/m8xgYZ","itch":"https://fabriziop.itch.io/tank-war-tactical"}},{"id":3,"title":"Franizia","description":"Made for a game jam. A 2D adventure-platformer made in Unity where you have to repair your spaceship.","image":"Images/Projects/Project4Franizia.webp","status":"Prototype","tags":["Unity","Prototypes"],"tech":["Unity","C#","2D","Platformer"],"clients":[{"name":"Quasar Institute for Advanced Design","url":"https://quasarinstitute.it/","image":"Images/Badges/quasar-logo.webp"}],"links":{"behance":"https://www.behance.net/gallery/101528399/FRANIZIA"}},{"id":2,"title":"Caos Arena","description":"A Fantasy FPS game! Defend the tomb of the ancient Gods from hordes of enemies. Made for an exam project.","image":"Images/Projects/Project5Caosarena.webp","status":"Released","tags":["Unreal Engine","Released"],"tech":["Unreal Engine","Blueprints","3D"],"clients":[{"name":"Quasar Institute for Advanced Design","url":"https://quasarinstitute.it/","image":"Images/Badges/quasar-logo.webp"}],"links":{"artstation":"https://www.artstation.com/artwork/nEkywK","itch":"https://fabriziop.itch.io/caos-arena"}},{"id":1,"title":"Lab 403","description":"You have managed to enter the fearsome laboratory 403. Made for an exam project.","image":"Images/Projects/Project6Lab403.webp","status":"Released","tags":["Unreal Engine","Released"],"tech":["Unreal Engine","Blueprints","3D"],"clients":[{"name":"Quasar Institute for Advanced Design","url":"https://quasarinstitute.it/","image":"Images/Badges/quasar-logo.webp"}],"links":{"artstation":"https://www.artstation.com/artwork/nEkbr6","itch":"https://fabriziop.itch.io/lab403"}},{"id":0,"title":"Sucked In","description":"This game was developed by a team of four in ten days during the Zagarolo Game City Game Jam.","image":"Images/Projects/Project7suckedin.webp","status":"Released","tags":["Unity","Released"],"tech":["Unity","C#","2D","Game Jam"],"clients":[{"name":"Lazion Innova - Zagarolo Game City","url":"https://www.lazioinnova.it/","image":"Images/Badges/lazioinnova.webp"}],"links":{"behance":"https://www.behance.net/gallery/122652769/SUCKED-IN","itch":"https://zagarolo-game-city.itch.io/sucked-in"}}]};
+
 // ========== PROJECT LOADING & FILTERING ==========
 async function loadProjects() {
   try {
-    const response = await fetch('projects.json');
-    const data = await response.json();
+    let data;
+    try {
+      const response = await fetch('projects.json');
+      if (!response.ok) throw new Error('fetch failed');
+      data = await response.json();
+    } catch (fetchErr) {
+      // file:// protocol fallback — use inline data
+      data = PROJECTS_DATA;
+    }
     STATE.projects = data.projects.sort((a, b) => b.id - a.id);
 
     STATE.visibleCount = getInitialCount();
@@ -213,7 +235,16 @@ function renderProjects(filter = 'all', resetCount = true) {
 
   const projectsToShow = filteredProjects.slice(0, STATE.visibleCount);
 
-  projectsGrid.innerHTML = projectsToShow.map(project => createProjectCard(project)).join('');
+  const header = `<div class="projects-table-header">
+    <span></span>
+    <span>Ref</span>
+    <span>Project</span>
+    <span>Engine</span>
+    <span>Tags</span>
+    <span>Links</span>
+    <span style="text-align:right">Status</span>
+  </div>`;
+  projectsGrid.innerHTML = header + projectsToShow.map(project => createProjectCard(project)).join('');
 
   if (STATE.visibleCount >= filteredProjects.length) {
     loadMoreContainer.style.display = 'none';
@@ -226,73 +257,62 @@ function renderProjects(filter = 'all', resetCount = true) {
 
 function createProjectCard(project) {
   const links = [];
-  
-  // Link Logic (Keep this exactly as it was)
-  if (project.links.artstation) {
-    links.push(`<a href="${project.links.artstation}" target="_blank" rel="noopener" class="project-link"><i class="fab fa-artstation"></i> ArtStation</a>`);
+  if (project.links.artstation) links.push(`<a href="${project.links.artstation}" target="_blank" rel="noopener" class="project-link"><i class="fab fa-artstation"></i></a>`);
+  if (project.links.itch)       links.push(`<a href="${project.links.itch}"       target="_blank" rel="noopener" class="project-link"><i class="fas fa-gamepad"></i></a>`);
+  if (project.links.github)     links.push(`<a href="${project.links.github}"     target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i></a>`);
+  if (project.links.behance)    links.push(`<a href="${project.links.behance}"    target="_blank" rel="noopener" class="project-link"><i class="fab fa-behance"></i></a>`);
+  if (project.links.website)    links.push(`<a href="${project.links.website}"    target="_blank" rel="noopener" class="project-link"><i class="fas fa-globe"></i></a>`);
+
+  let clientsHtml = '';
+  if (project.clients && project.clients.length > 0) {
+    const logosHtml = project.clients.map(c => `<a href="${c.url}" target="_blank" rel="noopener" title="${c.name}"><img src="${c.image}" alt="${c.name}" loading="lazy"></a>`).join('');
+    clientsHtml = `<div class="client-badge">${logosHtml}</div>`;
+  } else if (project.client) {
+    clientsHtml = `<div class="client-badge"><a href="${project.client.url}" target="_blank" rel="noopener" title="${project.client.name}"><img src="${project.client.image}" alt="${project.client.name}"></a></div>`;
   }
-  if (project.links.itch) {
-    links.push(`<a href="${project.links.itch}" target="_blank" rel="noopener" class="project-link"><i class="fas fa-gamepad"></i> Itch.io</a>`);
-  }
-  if (project.links.github) {
-    links.push(`<a href="${project.links.github}" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> GitHub</a>`);
-  }
-  if (project.links.behance) {
-    links.push(`<a href="${project.links.behance}" target="_blank" rel="noopener" class="project-link"><i class="fab fa-behance"></i> Behance</a>`);
-  }
-  if (project.links.website) {
-      links.push(`<a href="${project.links.website}" target="_blank" rel="noopener" class="project-link"><i class="fas fa-globe"></i> View Project</a>`);
-   }
-   
-   let clientHtml = '';
-   
-   if (project.clients && project.clients.length > 0) {
-          const logosHtml = project.clients.map(client => `
-              <a href="${client.url}" target="_blank" rel="noopener" title="Client: ${client.name}">
-                 <img src="${client.image}" alt="${client.name}">
-              </a>
-          `).join('');
-          
-          clientsHtml = `<div class="client-badge">${logosHtml}</div>`;
-      }
-      
-      // (Fallback)
-      else if (project.client) {
-          clientsHtml = `
-            <div class="client-badge">
-              <a href="${project.client.url}" target="_blank" rel="noopener" title="Client: ${project.client.name}">
-                 <img src="${project.client.image}" alt="${project.client.name}">
-              </a>
-            </div>
-          `;
-      }
-  
+
+  const isLive = project.status === 'In Progress' || project.status === 'Prototype';
+  const statusClass = isLive ? 'wip live' : '';
+  const statusMobileClass = isLive ? 'live-m' : '';
+  const idxPad = String(project.id).padStart(3, '0');
+
+  const engineRaw = project.tech ? project.tech.find(t => t === 'Unreal Engine' || t === 'Unity') || project.tech[0] : '';
+  const engineTag = engineRaw === 'Unreal Engine' ? 'UE5' : engineRaw;
+  const engineSub = project.tech ? project.tech.find(t => t === 'C++' || t === 'C#' || t === 'Blueprints') || '' : '';
+
+  const vrTag = project.tags.includes('VR');
+  const techBadges = project.tech
+    ? project.tech.filter(t => t !== engineTag && t !== engineSub).slice(0, 4)
+        .map(t => `<span class="tech-badge${t==='VR'||vrTag&&t.includes('VR')?' vr':''}">${t}</span>`).join('')
+    : '';
+
   return `
-    <article class="project-card" data-tags='${JSON.stringify(project.tags)}'>
+    <div class="project-card" data-tags='${JSON.stringify(project.tags)}'>
       <div class="project-image">
         <img src="${project.image}" alt="${project.title}" loading="lazy">
-        <span class="project-status">${project.status}</span>
+        <div class="project-status-mobile ${statusMobileClass}">${project.status}</div>
       </div>
+      <div class="project-idx-cell"><span class="project-idx">${idxPad}</span></div>
       <div class="project-content">
-              <div class="project-header">
-                <h3 class="project-title">${project.title}</h3>
-                ${clientsHtml} </div>
-        
+        <div class="project-header">
+          <h3 class="project-title">${project.title}</h3>
+          ${clientsHtml}
+        </div>
         <p class="project-description">${project.description}</p>
-        
-        ${project.tech ? `
-          <div class="project-tech">
-            ${project.tech.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
-          </div>
-        ` : ''}
-        
-        ${links.length > 0 ? `
-          <div class="project-links">
-            ${links.join('')}
-          </div>
-        ` : ''}
       </div>
-    </article>
+      <div class="project-engine-cell">
+        <span class="project-engine">${engineTag}${engineSub ? ' / ' + engineSub : ''}</span>
+      </div>
+      <div class="project-tags-cell">
+        <div class="project-tech">${techBadges}</div>
+      </div>
+      <div class="project-links-cell">
+        <div class="project-links">${links.join('')}</div>
+      </div>
+      <div class="project-status-cell">
+        <span class="project-status ${statusClass}">${project.status}</span>
+      </div>
+    </div>
   `;
 }
 
