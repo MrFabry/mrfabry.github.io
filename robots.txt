@@ -3,3 +3,4 @@ Allow: /
 Disallow: /Images/Badges/
 
 Sitemap: https://mrfabry.github.io/sitemap.xml
+LLMs: https://mrfabry.github.io/llms.txt

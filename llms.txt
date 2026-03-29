@@ -1,0 +1,107 @@
+# Fabrizio Pasini — Game Developer Portfolio
+
+> Rome-based Gameplay Developer specialised in Unreal Engine 5 (C++ & Blueprints), Unity C#, VR for Meta Quest 3, and architectural visualisation with PixelStreaming. Open to freelance and full-time opportunities globally.
+
+## Identity
+
+- Name: Fabrizio Pasini
+- Alias: MrFabry
+- Role: Game Developer / Gameplay Programmer
+- Location: Rome, Lazio, Italy
+- Email: pasini.fa@gmail.com
+- Website: https://mrfabry.github.io
+- Available: Yes — open to new projects
+
+## Education
+
+- Gameplay Developer Certificate — Rainbow Academy (https://www.rainbowacademy.it/)
+- Game Design Degree — Quasar Institute for Advanced Design (https://quasarinstitute.it/)
+
+## Technical Skills
+
+- Unreal Engine 5: C++, Blueprints, gameplay systems, plugin development, editor tools (4+ years)
+- Unity: C#, 2D/3D, Android, mobile games (2+ years)
+- VR: Meta Quest 3, OpenXR, MetaXR SDK, immersive experience development
+- ArchViz: PixelStreaming, Cesium, real-time architectural visualisation
+- Other: Android development, 3D modeling fundamentals, game jam experience
+
+## Projects
+
+### VR By Bridge Simulator
+A bridge maintenance training simulator built in Unreal Engine 5 with full VR support for Meta Quest 3. Provides engineers with a realistic virtual environment to safely train and refine maintenance procedures.
+- Status: In Progress
+- Engine: UE5 / C++ / Blueprints / VR MetaQuest 3
+- Client: Newo Design (https://newodesign.it)
+- Link: https://youtu.be/IgfvTkT7uc8
+
+### Realtime-Environment Interactive Visualization Apps
+Interactive architectural visualisations and walkthroughs using Unreal Engine for high-end architecture projects. Includes PixelStreaming deployment and Cesium integration.
+- Status: Prototype
+- Engine: UE5 / C++ / PixelStreaming / Cesium / ArchViz
+- Client: Newo Design (https://newodesign.it)
+- Link: https://youtu.be/J79uv_6Mk7A
+
+### BigBroApp
+Tamagotchi-style Twitch integration game for streamer Moonryde. Post-apocalyptic character management where viewers use Twitch channel points to purchase equipment and compete in real-time leaderboards.
+- Status: In Progress
+- Engine: Unity / C# / 2D / Mobile
+- Client: MoonRyde (https://www.twitch.tv/moonryde/), BigBro SRL
+
+### Adopted
+A horror experience built in Unreal Engine focused on atmosphere and storytelling. Based on a mountain legend about an entity that makes children disappear.
+- Status: Released
+- Engine: UE5 / Blueprints / 3D
+- Links: https://fabriziop.itch.io/adopted | https://www.artstation.com/artwork/xYkReW
+
+### Zombie Siege Chronicles
+Tower defense game set in the zombie apocalypse. Players defend their refuge against waves of undead enemies.
+- Status: Released
+- Engine: UE5 / C++ / 3D
+- Client: The Rookies, Rainbow Academy
+- Links: https://fabriziop.itch.io/zombie-siege-chronicles | https://www.therookies.co/entries/31862
+
+### Tank War Tactics
+Turn-based strategy game where players command tanks against AI-controlled enemies.
+- Status: Released
+- Engine: UE5 / C++
+- Client: Rainbow Academy
+- Links: https://fabriziop.itch.io/tank-war-tactical | https://mrfabry.artstation.com/projects/m8xgYZ
+
+### Franizia
+2D adventure-platformer made in Unity for a game jam. Players repair their spaceship to escape.
+- Status: Prototype
+- Engine: Unity / C# / 2D
+- Link: https://www.behance.net/gallery/101528399/FRANIZIA
+
+### Caos Arena
+Fantasy FPS — defend the tomb of ancient Gods from enemy hordes. Academic exam project.
+- Status: Released
+- Engine: UE5 / Blueprints
+- Links: https://fabriziop.itch.io/caos-arena | https://www.artstation.com/artwork/nEkywK
+
+### Lab 403
+First-person exploration game set in a fearsome laboratory. Academic exam project.
+- Status: Released
+- Engine: UE5 / Blueprints
+- Links: https://fabriziop.itch.io/lab403 | https://www.artstation.com/artwork/nEkbr6
+
+### Sucked In
+2D game developed by a four-person team in ten days at the Zagarolo Game City Game Jam.
+- Status: Released
+- Engine: Unity / C# / 2D
+- Links: https://zagarolo-game-city.itch.io/sucked-in | https://www.behance.net/gallery/122652769/SUCKED-IN
+
+## Profiles & Social Links
+
+- LinkedIn: https://linkedin.com/in/fabrizio-pasini-042791243
+- GitHub: https://github.com/MrFabry
+- ArtStation: https://mrfabry.artstation.com
+- Itch.io: https://fabriziop.itch.io
+- Behance: https://www.behance.net/fabriziopasiniGD
+- X / Twitter: https://x.com/MrFabryIT
+
+## Contact
+
+For collaboration, job opportunities, or project inquiries:
+- Email: pasini.fa@gmail.com
+- Website contact: https://mrfabry.github.io/#contact
