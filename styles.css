@@ -1,7 +1,7 @@
 /* ========================================
    Fabrizio Pasini — Blueprint / Terminal Theme
    ======================================== */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;700&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;700&family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap');
 
 :root {
   --bg:            #0b1622;
@@ -17,6 +17,7 @@
   --rule:          rgba(91,155,213,0.14);
   --rule2:         rgba(91,155,213,0.08);
   --mono:          'IBM Plex Mono', monospace;
+  --sans:          'Inter', system-ui, -apple-system, sans-serif;
   --display:       'Bebas Neue', sans-serif;
   --tf:            0.15s ease;
   --tb:            0.3s ease;
@@ -39,9 +40,6 @@ ul,ol{list-style:none}
 ::-webkit-scrollbar-thumb:hover{background:var(--blue)}
 
 /* ========== BLUEPRINT BACKGROUND ========== */
-/* Scanline overlay */
-body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.04) 3px,rgba(0,0,0,0.04) 4px);pointer-events:none;z-index:9999}
-
 .grid-overlay{
   position:fixed;inset:0;z-index:0;pointer-events:none;
   /* Minor grid: 20px */
@@ -55,15 +53,6 @@ body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradie
   /* Corner origin markers at 100px intersections */
 }
 
-/* Blueprint cross-hairs at major grid intersections */
-.grid-overlay::before{
-  content:'';position:absolute;inset:0;
-  background-image:
-    radial-gradient(circle, rgba(91,155,213,0.25) 1px, transparent 1px);
-  background-size:100px 100px;
-  background-position:0 0;
-}
-
 /* Vignette to push the bg into corners */
 .grid-overlay::after{
   content:'';position:absolute;inset:0;
@@ -75,7 +64,7 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);letter-spacing:2px;color:var(--ink)
 h1{font-size:clamp(3rem,8vw,6rem)}
 h2{font-size:clamp(1.6rem,4vw,2.4rem)}
 h3{font-size:clamp(1rem,2.5vw,1.4rem)}
-p{color:var(--ink2);margin-bottom:.9rem;font-size:.9rem;line-height:1.85}
+p{font-family:var(--sans);color:var(--ink2);margin-bottom:.9rem;font-size:.95rem;line-height:1.7;letter-spacing:.1px}
 strong{color:var(--ink);font-weight:700}
 
 /* ========== LAYOUT ========== */
@@ -151,7 +140,7 @@ strong{color:var(--ink);font-weight:700}
 .glow-text{color:inherit;background:none;-webkit-background-clip:unset;-webkit-text-fill-color:unset;text-shadow:none;animation:none}
 .hero-subtitle{font-family:var(--mono);font-size:.72rem;font-weight:400;letter-spacing:3px;text-transform:uppercase;color:var(--blue);margin-bottom:1.4rem;display:flex;align-items:center;gap:8px}
 .hero-subtitle::before{content:'>';color:var(--green);font-weight:700}
-.hero-description{font-size:.82rem;color:var(--ink2);line-height:1.85;max-width:500px;margin-bottom:2rem}
+.hero-description{font-size:.95rem;color:var(--ink2);line-height:1.7;max-width:520px;margin-bottom:2rem}
 .hero-description .hl{color:var(--ink)}
 .hero-cta{display:flex;gap:.8rem;flex-wrap:wrap}
 
@@ -165,8 +154,6 @@ strong{color:var(--ink);font-weight:700}
 .spec-key{font-size:.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink3)}
 .spec-val{font-size:.9rem;font-weight:700;color:var(--ink)}
 .spec-val .unit{font-size:.62rem;font-weight:400;color:var(--ink3)}
-.spec-val.live{color:var(--green);font-size:.68rem;font-weight:400;display:flex;align-items:center;gap:6px}
-.spec-val.live::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 5px var(--green);animation:pip 2s ease-in-out infinite;flex-shrink:0}
 
 /* ========== ABOUT ========== */
 .about-section{background:var(--bg2)}
@@ -189,7 +176,7 @@ strong{color:var(--ink);font-weight:700}
 .t-dim{color:var(--ink3)}
 .t-cursor{display:inline-block;width:7px;height:13px;background:var(--green);vertical-align:text-bottom;margin-left:2px;animation:bcursor .9s step-end infinite}
 @keyframes bcursor{0%,100%{opacity:1}50%{opacity:0}}
-.about-text{font-size:.88rem;color:var(--ink2);line-height:1.85}
+.about-text{font-family:var(--sans);font-size:.95rem;color:var(--ink2);line-height:1.7}
 .about-text p{margin-bottom:.9rem}
 .about-highlights{display:flex;flex-direction:column;gap:.5rem;margin-top:1.5rem}
 .highlight-item{display:flex;align-items:center;gap:.7rem;font-size:.7rem;color:var(--ink2);padding:.5rem .8rem;border:1px solid var(--rule);background:var(--blue-faint);transition:border-color var(--tf)}
@@ -277,7 +264,7 @@ strong{color:var(--ink);font-weight:700}
 .contact-content{max-width:none;text-align:left}
 .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
 .contact-info h3{font-family:var(--display);font-size:1.6rem;letter-spacing:2px;color:var(--ink);margin-bottom:.8rem}
-.contact-info>p{font-size:.85rem;color:var(--ink2);line-height:1.8;margin-bottom:1.5rem}
+.contact-info>p{font-size:.95rem;color:var(--ink2);line-height:1.7;margin-bottom:1.5rem}
 .contact-details{display:flex;flex-direction:column;gap:.5rem;margin-bottom:0;font-style:normal}
 .contact-item{display:flex;align-items:center;gap:.7rem;padding:.7rem 1rem;background:var(--blue-faint);border:1px solid var(--rule);border-radius:0;transition:border-color var(--tf)}
 .contact-item:hover{border-color:var(--blue)}
@@ -317,14 +304,11 @@ strong{color:var(--ink);font-weight:700}
     linear-gradient(rgba(30,80,140,.1) 1px,transparent 1px),
     linear-gradient(90deg,rgba(30,80,140,.1) 1px,transparent 1px)
 }
-[data-theme="light"] .grid-overlay::before{background-image:radial-gradient(circle,rgba(30,80,140,.2) 1px,transparent 1px);background-size:100px 100px}
 [data-theme="light"] .grid-overlay::after{background:radial-gradient(ellipse at 50% 40%,transparent 30%,rgba(220,228,239,.5) 100%)}
 [data-theme="light"] .t-hi{color:#0a7c4e}
 [data-theme="light"] .t-cursor{background:#0a7c4e}
 [data-theme="light"] .status-dot{background:#0a7c4e;box-shadow:0 0 6px #0a7c4e}
 [data-theme="light"] .nav-status-pill{color:#0a7c4e}
-[data-theme="light"] .spec-val.live{color:#0a7c4e}
-[data-theme="light"] .spec-val.live::before{background:#0a7c4e;box-shadow:none}
 [data-theme="light"] .project-status.wip,[data-theme="light"] .project-status.live{color:#0a7c4e}
 [data-theme="light"] .project-status.live::before{background:#0a7c4e;box-shadow:none}
 [data-theme="light"] .skill-bar-fill.vr{background:#0a7c4e}
@@ -561,65 +545,7 @@ strong{color:var(--ink);font-weight:700}
 .bp-bl { bottom: 1.5rem; left: 1.5rem; border-bottom: 1px solid var(--blue); border-left: 1px solid var(--blue); opacity: .35; }
 .bp-br { bottom: 1.5rem; right: 1.5rem; border-bottom: 1px solid var(--blue); border-right: 1px solid var(--blue); opacity: .35; }
 
-/* Horizontal annotation lines — start below 58px navbar */
-.bp-hline { position: absolute; left: 2.5rem; right: 2.5rem; height: 1px; background: var(--rule); }
-.bp-hline-top { top: calc(58px + 1.4rem); }
-.bp-hline-mid { top: 50%; }
-
-/* Vertical line on right third — also starts below navbar */
-.bp-vline { position: absolute; top: calc(58px + 1.4rem); bottom: 3.2rem; width: 1px; background: var(--rule); right: 28%; }
-
-/* Crosshair markers */
-.bp-crosshair {
-  position: absolute; width: 14px; height: 14px;
-}
-.bp-crosshair::before, .bp-crosshair::after {
-  content: ''; position: absolute; background: var(--blue); opacity: .4;
-}
-.bp-crosshair::before { width: 1px; height: 100%; left: 50%; }
-.bp-crosshair::after  { width: 100%; height: 1px; top: 50%; }
-.bp-ch1 { top: 50%; left: 28%; transform: translate(-50%, -50%); }
-.bp-ch2 { top: calc(58px + 1.4rem); right: 28%; transform: translate(50%, -50%); }
-
-/* Dimension callout */
-.bp-dim {
-  position: absolute; bottom: 3.5rem; left: 2.5rem; right: 2.5rem;
-  display: flex; align-items: center; gap: 8px;
-  font-family: var(--mono); font-size: .52rem; letter-spacing: 2px;
-  color: var(--ink3); text-transform: uppercase;
-}
-.bp-dim-line { flex: 1; height: 1px; background: var(--ink3); opacity: .3; }
-.bp-dim-label { white-space: nowrap; opacity: .5; flex-shrink: 0; }
-
-/* Coordinate labels at corners */
-.bp-coord {
-  position: absolute; font-family: var(--mono); font-size: .48rem;
-  letter-spacing: 1.5px; color: var(--ink3); opacity: .4; text-transform: uppercase;
-}
-.bp-coord-tl { top: 1.2rem; left: 3.5rem; }
-.bp-coord-br { bottom: 1.2rem; right: 3.5rem; }
-
-/* Hide annotations on mobile — too cramped */
-@media(max-width:768px) {
-  .bp-dim-label { display: none; }
-  .bp-vline { display: none; }
-  .bp-coord { display: none; }
-  .bp-hline-mid { display: none; }
-}
-
 /* ========== HERO: richer blueprint texture ========== */
-/* Stronger local grid inside hero only */
-.hero::before {
-  content: '';
-  position: absolute; inset: 0; z-index: 0; pointer-events: none;
-  background-image:
-    radial-gradient(circle, rgba(91,155,213,0.22) 1px, transparent 1px);
-  background-size: 40px 40px;
-  mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 40%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 40%, transparent 100%);
-  opacity: .6;
-}
-
 /* Warm radial to separate hero from rest */
 .hero::after {
   content: '';
