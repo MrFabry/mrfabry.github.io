@@ -5,7 +5,7 @@
       "title": "VR By Bridge Simulator",
       "description": "A Bridge-based simulator that provides engineers with a realistic virtual environment to train and refine maintenance procedures safely and efficiently.",
       "image": "Images/Projects/Project9vrbridge.webp",
-      "status": "In Progress",
+      "status": "Prototypes",
       "tags": ["Unreal Engine", "VR", "Work in Progress"],
       "tech": ["Unreal Engine", "C++", "Blueprints", "3D", "VR MetaQuest 3"],
       "clients": [
