@@ -55,7 +55,7 @@ Game Developer with 4+ years of experience building gameplay systems, VR experie
 ```
 mrfabry.github.io/
 ├── index.html          # Main portfolio page
-├── styles.css          # Blueprint/Terminal theme stylesheet
+├── styles.css          # UE5 editor theme stylesheet
 ├── script.js           # Vanilla JS — project loading, filtering, nav
 ├── projects.json       # Project data source
 ├── sitemap.xml         # XML sitemap for search engines

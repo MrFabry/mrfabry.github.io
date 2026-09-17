@@ -5,9 +5,20 @@
       "title": "VR By Bridge Simulator",
       "description": "A Bridge-based simulator that provides engineers with a realistic virtual environment to train and refine maintenance procedures safely and efficiently.",
       "image": "Images/Projects/Project9vrbridge.webp",
-      "status": "Prototypes",
-      "tags": ["Unreal Engine", "VR", "Work in Progress"],
-      "tech": ["Unreal Engine", "C++", "Blueprints", "3D", "VR MetaQuest 3"],
+      "status": "Prototype",
+      "tags": [
+        "Unreal Engine",
+        "VR",
+        "Work in Progress",
+        "Prototypes"
+      ],
+      "tech": [
+        "Unreal Engine",
+        "C++",
+        "Blueprints",
+        "3D",
+        "VR MetaQuest 3"
+      ],
       "clients": [
         {
           "name": "Newo Design",
@@ -24,9 +35,20 @@
       "title": "Realtime-Environment Interactive Visualization Apps",
       "description": "Interactive architectural visualizations and walkthroughs using Unreal Engine for high-end architecture projects.",
       "image": "Images/Projects/Project10archviz.webp",
-      "status": "Prototypes",
-      "tags": ["Unreal Engine", "Prototypes"],
-      "tech": ["Unreal Engine", "C++", "Blueprints", "3D", "PixelStreaming", "Cesium", "ArchViz"],
+      "status": "Prototype",
+      "tags": [
+        "Unreal Engine",
+        "Prototypes"
+      ],
+      "tech": [
+        "Unreal Engine",
+        "C++",
+        "Blueprints",
+        "3D",
+        "PixelStreaming",
+        "Cesium",
+        "ArchViz"
+      ],
       "clients": [
         {
           "name": "Newo Design",
@@ -44,8 +66,17 @@
       "description": "Innovative Tamagotchi-style game for famous Twitch streamer Moonryde featuring post-apocalyptic character management. Players use Twitch points to purchase equipment and food, enhancing their character's power score and competing in real-time leaderboards within the streaming community.",
       "image": "Images/Projects/Project8bigbro.webp",
       "status": "In Progress",
-      "tags": ["Unity", "Work in Progress"],
-      "tech": ["Unity", "C#", "2D", "Mobile", "Project Manager"],
+      "tags": [
+        "Unity",
+        "Work in Progress"
+      ],
+      "tech": [
+        "Unity",
+        "C#",
+        "2D",
+        "Mobile",
+        "Project Manager"
+      ],
       "clients": [
         {
           "name": "MoonRyde twitch",
@@ -68,8 +99,16 @@
       "description": "A particular legend has been widespread about an entity in the mountains that kidnaps and makes children disappear. A horror experience focused on atmosphere and storytelling.",
       "image": "Images/Projects/Project1Adopted.webp",
       "status": "Released",
-      "tags": ["Unreal Engine", "Released Games"],
-      "tech": ["Unreal Engine", "Blueprints", "3D", "Horror"],
+      "tags": [
+        "Unreal Engine",
+        "Released Games"
+      ],
+      "tech": [
+        "Unreal Engine",
+        "Blueprints",
+        "3D",
+        "Horror"
+      ],
       "clients": [
         {
           "name": "Quasar Institute for Advanced Design",
@@ -88,8 +127,16 @@
       "description": "Defend your refuge against relentless undead hordes in this intense tower defense game set in the zombie apocalypse.",
       "image": "Images/Projects/Project2ZombieSiegeChronicles.webp",
       "status": "Released",
-      "tags": ["Unreal Engine", "Released Games"],
-      "tech": ["Unreal Engine", "C++", "3D", "Strategy"],
+      "tags": [
+        "Unreal Engine",
+        "Released Games"
+      ],
+      "tech": [
+        "Unreal Engine",
+        "C++",
+        "3D",
+        "Strategy"
+      ],
       "clients": [
         {
           "name": "The Rookies",
@@ -97,9 +144,9 @@
           "image": "Images/Badges/rookies-logo.webp"
         },
         {
-        "name": "Rainbow Academy",
-        "url": "https://www.rainbowacademy.it/",
-        "image": "Images/Badges/rainbowacademy-logo.webp"
+          "name": "Rainbow Academy",
+          "url": "https://www.rainbowacademy.it/",
+          "image": "Images/Badges/rainbowacademy-logo.webp"
         }
       ],
       "links": {
@@ -113,8 +160,15 @@
       "description": "A turn-based strategy game where players command a team of tanks to battle against enemy AI-controlled tanks.",
       "image": "Images/Projects/Project3TankWarTactics.webp",
       "status": "Released",
-      "tags": ["Unreal Engine", "Released Games"],
-      "tech": ["Unreal Engine", "C++", "Turn-Based"],
+      "tags": [
+        "Unreal Engine",
+        "Released Games"
+      ],
+      "tech": [
+        "Unreal Engine",
+        "C++",
+        "Turn-Based"
+      ],
       "clients": [
         {
           "name": "Rainbow Academy",
@@ -133,8 +187,16 @@
       "description": "Made for a game jam. A 2D adventure-platformer made in Unity where you have to repair your spaceship.",
       "image": "Images/Projects/Project4Franizia.webp",
       "status": "Prototype",
-      "tags": ["Unity", "Prototypes"],
-      "tech": ["Unity", "C#", "2D", "Platformer"],
+      "tags": [
+        "Unity",
+        "Prototypes"
+      ],
+      "tech": [
+        "Unity",
+        "C#",
+        "2D",
+        "Platformer"
+      ],
       "clients": [
         {
           "name": "Quasar Institute for Advanced Design",
@@ -152,8 +214,15 @@
       "description": "A Fantasy FPS game! Defend the tomb of the ancient Gods from hordes of enemies. Made for a exam project.",
       "image": "Images/Projects/Project5Caosarena.webp",
       "status": "Released",
-      "tags": ["Unreal Engine", "Released"],
-      "tech": ["Unreal Engine", "Blueprints","3D"],
+      "tags": [
+        "Unreal Engine",
+        "Released Games"
+      ],
+      "tech": [
+        "Unreal Engine",
+        "Blueprints",
+        "3D"
+      ],
       "clients": [
         {
           "name": "Quasar Institute for Advanced Design",
@@ -172,8 +241,15 @@
       "description": "You have managed to enter the fearsome laboratory 403. Made for a exam project.",
       "image": "Images/Projects/Project6Lab403.webp",
       "status": "Released",
-      "tags": ["Unreal Engine", "Released"],
-      "tech": ["Unreal Engine", "Blueprints","3D"],
+      "tags": [
+        "Unreal Engine",
+        "Released Games"
+      ],
+      "tech": [
+        "Unreal Engine",
+        "Blueprints",
+        "3D"
+      ],
       "clients": [
         {
           "name": "Quasar Institute for Advanced Design",
@@ -192,8 +268,16 @@
       "description": "This game was developed by a team of four in ten days during the Zagarolo Game City Game Jam.",
       "image": "Images/Projects/Project7suckedin.webp",
       "status": "Released",
-      "tags": ["Unity", "Released"],
-      "tech": ["Unity", "C#", "2D", "Game Jam"],
+      "tags": [
+        "Unity",
+        "Released Games"
+      ],
+      "tech": [
+        "Unity",
+        "C#",
+        "2D",
+        "Game Jam"
+      ],
       "clients": [
         {
           "name": "Lazion Innova - Zagarolo Game City",

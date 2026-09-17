@@ -25,21 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
 });
 
-// ========== THEME MANAGEMENT ==========
+// ========== THEME ==========
+// Il sito ha un solo tema (UE5 editor, sempre scuro): niente toggle da gestire.
 function initTheme() {
-  const themeToggle = document.getElementById('themeToggle');
-  const html = document.documentElement;
-
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  html.setAttribute('data-theme', savedTheme);
-
-  themeToggle.addEventListener('click', () => {
-    const currentTheme = html.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-    html.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-  });
+  document.documentElement.setAttribute('data-theme', 'dark');
+  try { localStorage.removeItem('theme'); } catch (e) {}
 }
 
 // ========== NAVIGATION ==========
@@ -177,7 +167,8 @@ async function loadProjects() {
   try {
     let data;
     try {
-      const response = await fetch('projects.json');
+      // cache-busting: senza, i browser continuano a servire il vecchio elenco progetti
+      const response = await fetch('projects.json', { cache: 'no-cache' });
       if (!response.ok) throw new Error('fetch failed');
       data = await response.json();
     } catch (fetchErr) {
@@ -271,9 +262,12 @@ function createProjectCard(project) {
     clientsHtml = `<div class="client-badge"><a href="${project.client.url}" target="_blank" rel="noopener" title="${project.client.name}"><img src="${project.client.image}" alt="${project.client.name}"></a></div>`;
   }
 
-  const isLive = project.status === 'In Progress' || project.status === 'Prototype';
-  const statusClass = isLive ? 'wip live' : '';
-  const statusMobileClass = isLive ? 'live-m' : '';
+  // tre stati distinti: in lavorazione (ambra), prototipo (blu), rilasciato (verde)
+  const st = (project.status || '').toLowerCase();
+  const statusClass = /progress/.test(st) ? 'wip'
+                    : /prototype/.test(st) ? 'proto'
+                    : /released/.test(st)  ? 'shipped' : '';
+  const statusMobileClass = statusClass ? statusClass + '-m' : '';
   const idxPad = String(project.id).padStart(3, '0');
 
   const engineRaw = project.tech ? project.tech.find(t => t === 'Unreal Engine' || t === 'Unity') || project.tech[0] : '';
