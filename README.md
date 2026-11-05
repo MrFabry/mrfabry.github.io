@@ -37,9 +37,9 @@ Game Developer with 4+ years of experience building gameplay systems, VR experie
 
 | Project | Engine | Status |
 |---------|--------|--------|
-| [VR Bridge Simulator](https://youtu.be/IgfvTkT7uc8) | UE5 / C++ / VR | In Progress |
+| [VR Bridge Simulator](https://youtu.be/IgfvTkT7uc8) | UE5 / C++ / VR | Prototype |
 | [ArchViz Interactive Apps](https://youtu.be/J79uv_6Mk7A) | UE5 / PixelStreaming | Prototype |
-| [BigBroApp](https://www.twitch.tv/moonryde/) | Unity / C# | In Progress |
+| [BigBroApp](https://www.twitch.tv/moonryde/) | Unity / C# | Prototype |
 | [Zombie Siege Chronicles](https://fabriziop.itch.io/zombie-siege-chronicles) | UE5 / C++ | Released |
 | [Tank War Tactics](https://fabriziop.itch.io/tank-war-tactical) | UE5 / C++ | Released |
 | [Adopted](https://fabriziop.itch.io/adopted) | UE5 / Blueprints | Released |

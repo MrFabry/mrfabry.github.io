@@ -29,7 +29,7 @@
 
 ### VR By Bridge Simulator
 A bridge maintenance training simulator built in Unreal Engine 5 with full VR support for Meta Quest 3. Provides engineers with a realistic virtual environment to safely train and refine maintenance procedures.
-- Status: In Progress
+- Status: Prototype
 - Engine: UE5 / C++ / Blueprints / VR MetaQuest 3
 - Client: Newo Design (https://newodesign.it)
 - Link: https://youtu.be/IgfvTkT7uc8
@@ -43,7 +43,7 @@ Interactive architectural visualisations and walkthroughs using Unreal Engine fo
 
 ### BigBroApp
 Tamagotchi-style Twitch integration game for streamer Moonryde. Post-apocalyptic character management where viewers use Twitch channel points to purchase equipment and compete in real-time leaderboards.
-- Status: In Progress
+- Status: Prototype
 - Engine: Unity / C# / 2D / Mobile
 - Client: MoonRyde (https://www.twitch.tv/moonryde/), BigBro SRL
 
