@@ -9,7 +9,6 @@
       "tags": [
         "Unreal Engine",
         "VR",
-        "Work in Progress",
         "Prototypes"
       ],
       "tech": [
@@ -65,10 +64,10 @@
       "title": "BigBroApp",
       "description": "Innovative Tamagotchi-style game for famous Twitch streamer Moonryde featuring post-apocalyptic character management. Players use Twitch points to purchase equipment and food, enhancing their character's power score and competing in real-time leaderboards within the streaming community.",
       "image": "Images/Projects/Project8bigbro.webp",
-      "status": "In Progress",
+      "status": "Prototype",
       "tags": [
         "Unity",
-        "Work in Progress"
+        "Prototypes"
       ],
       "tech": [
         "Unity",
