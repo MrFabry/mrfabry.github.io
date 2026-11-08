@@ -19,7 +19,6 @@ function getInitialCount() {
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initNavigation();
-  initCookieConsent();
   loadProjects();
   initCopyrightYear();
   initScrollAnimations();
@@ -205,6 +204,7 @@ function renderProjects(filter = 'all', resetCount = true) {
   const loadMoreContainer = document.getElementById('loadMoreContainer');
 
   if (!projectsGrid) return;
+  projectsGrid.removeAttribute('aria-busy');
 
   if (resetCount) {
     STATE.currentFilter = filter;
@@ -247,12 +247,19 @@ function renderProjects(filter = 'all', resetCount = true) {
 }
 
 function createProjectCard(project) {
-  const links = [];
-  if (project.links.artstation) links.push(`<a href="${project.links.artstation}" target="_blank" rel="noopener" class="project-link"><i class="fab fa-artstation"></i></a>`);
-  if (project.links.itch)       links.push(`<a href="${project.links.itch}"       target="_blank" rel="noopener" class="project-link"><i class="fas fa-gamepad"></i></a>`);
-  if (project.links.github)     links.push(`<a href="${project.links.github}"     target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i></a>`);
-  if (project.links.behance)    links.push(`<a href="${project.links.behance}"    target="_blank" rel="noopener" class="project-link"><i class="fab fa-behance"></i></a>`);
-  if (project.links.website)    links.push(`<a href="${project.links.website}"    target="_blank" rel="noopener" class="project-link"><i class="fas fa-globe"></i></a>`);
+  const LINK_TYPES = [
+    ['artstation', 'fab fa-artstation', 'ArtStation'],
+    ['itch',       'fas fa-gamepad',    'itch.io'],
+    ['github',     'fab fa-github',     'GitHub'],
+    ['behance',    'fab fa-behance',    'Behance'],
+    ['website',    'fas fa-globe',      'project link'],
+  ];
+  const links = LINK_TYPES
+    .filter(([key]) => project.links[key])
+    .map(([key, icon, label]) => {
+      const name = `${project.title} — ${label}`;
+      return `<a href="${project.links[key]}" target="_blank" rel="noopener" class="project-link" aria-label="${name}" title="${name}"><i class="${icon}" aria-hidden="true"></i></a>`;
+    });
 
   let clientsHtml = '';
   if (project.clients && project.clients.length > 0) {
@@ -338,6 +345,7 @@ function showEmptyState(message = 'No projects found with the selected filters.'
   const projectsGrid = document.getElementById('projectsGrid');
 
   if (emptyState && projectsGrid) {
+    projectsGrid.removeAttribute('aria-busy');
     projectsGrid.innerHTML = '';
     emptyState.style.display = 'block';
     emptyState.querySelector('p').textContent = message;
@@ -363,24 +371,7 @@ function initLazyLoading() {
   }
 }
 
-// ========== COOKIE CONSENT ==========
-function initCookieConsent() {
-  const cookieConsent = document.getElementById('cookieConsent');
-  const acceptButton = document.getElementById('cookieAccept');
-
-  if (!cookieConsent || !acceptButton) return;
-
-  const consentGiven = localStorage.getItem('cookieConsent');
-
-  if (!consentGiven) {
-    cookieConsent.style.display = 'block';
-  }
-
-  acceptButton.addEventListener('click', () => {
-    localStorage.setItem('cookieConsent', 'accepted');
-    cookieConsent.style.display = 'none';
-  });
-}
+// Cookie consent + Google Analytics live in consent.js (shared by every page).
 
 // ========== COPYRIGHT YEAR ==========
 function initCopyrightYear() {
