@@ -55,15 +55,21 @@ Game Developer with 4+ years of experience building gameplay systems, VR experie
 ```
 mrfabry.github.io/
 ├── index.html          # Main portfolio page
+├── privacy.html        # Privacy policy (GDPR)
+├── 404.html            # Custom "page not found" (served by GitHub Pages)
 ├── styles.css          # UE5 editor theme stylesheet
 ├── script.js           # Vanilla JS — project loading, filtering, nav
+├── consent.js          # Cookie banner + consent-gated Google Analytics (all pages)
 ├── projects.json       # Project data source
 ├── sitemap.xml         # XML sitemap for search engines
 ├── robots.txt          # Crawler directives
 ├── llms.txt            # AI/LLM-readable site summary
+├── site.webmanifest    # Web app manifest (home-screen icons)
+├── favicon.ico         # Favicon set: .ico + 16/32 PNG, apple-touch-icon, 192/512 icons
 ├── Images/
 │   ├── Projects/       # Project screenshots
 │   ├── Badges/         # Client logos
+│   ├── og-image.jpg    # 1200×630 social share image
 │   └── ...
 ├── LICENSE.md
 ├── SECURITY.md
