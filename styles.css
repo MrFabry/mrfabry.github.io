@@ -488,7 +488,7 @@ strong{color:var(--ink);font-weight:600}
 .contact-item i{color:var(--ink3);width:16px;text-align:center;font-size:.85rem}
 .contact-item a,.contact-item span{color:var(--ink2)}
 .contact-item a:hover{color:var(--blue)}
-.email-img{height:1.21em;width:auto;vertical-align:-.24em}
+.email-img{display:inline-block;height:1.21em;width:auto;vertical-align:-.24em}
 
 .social-links{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem}
 .social-btn{
