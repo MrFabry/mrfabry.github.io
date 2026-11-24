@@ -95,4 +95,4 @@ Deployed automatically via GitHub Pages on push to `main`.
 
 ## Contact
 
-**Email:** [[email removed]](mailto:[email removed])
+**Contact:** the email shown in the [site's contact section](https://fabriziopasini.me/#contact)

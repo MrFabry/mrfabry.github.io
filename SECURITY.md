@@ -25,7 +25,7 @@ If you discover a security issue, please **do not open a public GitHub issue**.
 
 Contact me directly:
 
-- **Email:** [[email removed]](mailto:[email removed])
+- **Contact:** the email shown in the [site's contact section](https://fabriziopasini.me/#contact)
 - **Subject line:** `[SECURITY] mrfabry.github.io — brief description`
 
 Please include:

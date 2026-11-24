@@ -51,4 +51,4 @@ Please keep PRs small. One fix per PR is ideal.
 
 ## Questions
 
-Feel free to reach out directly: [[email removed]](mailto:[email removed])
+Feel free to reach out directly: the email shown in the [site's contact section](https://fabriziopasini.me/#contact)

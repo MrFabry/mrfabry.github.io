@@ -29,7 +29,7 @@ This Code of Conduct applies to all project spaces — GitHub Issues, Pull Reque
 
 This project is maintained solely by **Fabrizio Pasini**. If you experience or witness unacceptable behaviour, please report it directly:
 
-- **Email:** [[email removed]](mailto:[email removed])
+- **Contact:** the email shown in the [site's contact section](https://fabriziopasini.me/#contact)
 - **Subject line:** `[CODE OF CONDUCT] brief description`
 
 All reports will be reviewed promptly. I am committed to maintaining confidentiality for the reporter. Depending on severity, responses may include a private warning, removal of content, or blocking from the repository.

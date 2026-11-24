@@ -43,7 +43,7 @@ the exclusive property of Fabrizio Pasini. **All rights reserved.**
 You may **not** reproduce, distribute, or use any of the above content without
 explicit written permission from the author.
 
-To request permission: [[email removed]](mailto:[email removed])
+To request permission: the email shown in the [site's contact section](https://fabriziopasini.me/#contact)
 
 ---
 
