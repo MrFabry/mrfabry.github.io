@@ -1,6 +1,6 @@
 # Fabrizio Pasini — Game Developer Portfolio
 
-**Live site:** [mrfabry.github.io](https://mrfabry.github.io)
+**Live site:** [fabriziopasini.me](https://fabriziopasini.me)
 
 Rome-based Gameplay Developer specialised in **Unreal Engine 5** (C++ & Blueprints), **Unity C#**, **VR for Meta Quest 3**, and **ArchViz with PixelStreaming**. This repository contains the full source code for my personal portfolio website.
 
@@ -14,7 +14,7 @@ Game Developer with 4+ years of experience building gameplay systems, VR experie
 
 | Platform | Link |
 |----------|------|
-| Portfolio | [mrfabry.github.io](https://mrfabry.github.io) |
+| Portfolio | [fabriziopasini.me](https://fabriziopasini.me) |
 | LinkedIn | [linkedin.com/in/fabrizio-pasini-042791243](https://linkedin.com/in/fabrizio-pasini-042791243) |
 | ArtStation | [mrfabry.artstation.com](https://mrfabry.artstation.com) |
 | Itch.io | [fabriziop.itch.io](https://fabriziop.itch.io) |

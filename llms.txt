@@ -9,7 +9,7 @@
 - Role: Game Developer / Gameplay Programmer
 - Location: Rome, Lazio, Italy
 - Email: [email removed]
-- Website: https://mrfabry.github.io
+- Website: https://fabriziopasini.me
 - Available: Yes — open to new projects
 
 ## Education
@@ -104,4 +104,4 @@ First-person exploration game set in a fearsome laboratory. Academic exam projec
 
 For collaboration, job opportunities, or project inquiries:
 - Email: [email removed]
-- Website contact: https://mrfabry.github.io/#contact
+- Website contact: https://fabriziopasini.me/#contact

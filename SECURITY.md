@@ -2,7 +2,7 @@
 
 ## Scope
 
-This repository contains the source code for a **static personal portfolio website** hosted on GitHub Pages ([mrfabry.github.io](https://mrfabry.github.io)). There is no backend, no database, no user authentication, and no stored user data beyond anonymised Google Analytics events.
+This repository contains the source code for a **static personal portfolio website** hosted on GitHub Pages ([fabriziopasini.me](https://fabriziopasini.me)). There is no backend, no database, no user authentication, and no stored user data beyond anonymised Google Analytics events.
 
 The following are **in scope** for security reports:
 

@@ -2,5 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /Images/Badges/
 
-Sitemap: https://mrfabry.github.io/sitemap.xml
-LLMs: https://mrfabry.github.io/llms.txt
+Sitemap: https://fabriziopasini.me/sitemap.xml
+LLMs: https://fabriziopasini.me/llms.txt
